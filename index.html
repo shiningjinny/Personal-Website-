@@ -3,702 +3,568 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="Jinkyeong Lee">
-<meta property="og:description" content="Build research-grounded AI products for kids & society.">
-<meta property="og:image" content="img/wisdom-island.webp">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E0E0E'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='%238ED2F2'%3EJ%3C/text%3E%3C/svg%3E">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta property="og:title" content="Jinkyeong Lee · Safe AI for Society">
+<meta property="og:description" content="Research-grounded AI products: AI literacy and AI ethics for kids and society.">
+<meta property="og:image" content="https://jinkyeong-lee.vercel.app/img/little-aiki.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316150F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' text-anchor='middle' fill='%23F6F5F1'%3EJ%3C/text%3E%3C/svg%3E">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Jinkyeong Lee</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Jinkyeong Lee builds research-grounded AI products for kids and society. MSc AI in Society, TUM.">
+<meta name="description" content="Jinkyeong Lee builds research-grounded AI products: AI literacy and AI ethics for kids and society. MSc AI in Society, TUM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <style>
-/* Layout: sky-blue bands with tight heavy display type; black ticker of focus areas; dark image tiles carrying number, title and one key figure; black toolkit panel; black footer with outlined name. One sans family + one mono. */
+/* Layout: quiet gallery. Centered serif statements on warm off-white, large rounded image plates, narrow reading column for case studies, hairline-ruled lists. Serif carries the voice, a small grotesk carries labels and body. */
 :root{
-  --sky:#C2E7FA; --sky2:#EAF7FD; --ink:#0E0E0E; --ink2:#3A4248; --muted:#5B6870; --line:#9CC4D6;
-  --black:#0E0E0E; --onblack:#F3F7F9; --accent:#8ED2F2; --panel:#161A1D;
-  --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --paper:#F6F5F1; --paper2:#EEECE6; --ink:#16150F; --ink2:#4A4842; --muted:#8A877F; --rule:#DAD7CF;
+  --pill:rgba(255,255,255,.86);
+  --f-wi:#CFE6F2; --f-ai:#E6DFD0; --f-ig:#F0DAD3; --f-pb:#EDE3CD; --f-wrp:#1F3A30; --f-bc:#D9DDE6;
+  --serif:"EB Garamond", "Iowan Old Style", Georgia, serif;
+  --sans:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   color-scheme:light;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--sky);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
 .g{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.max{max-width:1240px;margin:0 auto}
-.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase}
-.label{display:inline-flex;align-items:center;gap:10px}
-.label::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
-.big{font-weight:800;letter-spacing:-.045em;line-height:.92;margin:0;text-wrap:balance}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--black);color:var(--accent);border-radius:999px;padding:12px 20px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:var(--sans);transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.wrap{max-width:1180px;margin:0 auto}
+.narrow{max-width:620px;margin:0 auto}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+.small{font-size:13px;color:var(--muted)}
+h1,h2,h3,h4{margin:0;font-weight:400}
 
 /* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--sky) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header .max{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
-.logo{font-weight:800;font-size:21px;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:baseline;gap:14px;min-width:0}
-.logo .slogan{font-weight:400;font-size:11.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hero-name{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px;font-weight:700;font-size:clamp(20px,2vw,26px);letter-spacing:-.02em}
-.hero-name .mono{font-weight:400;font-size:12.5px;color:var(--ink2);border:1.5px solid var(--ink);border-radius:999px;padding:5px 12px}
-@media (max-width:640px){.logo .slogan{display:none}}
-nav{display:flex;gap:22px;align-items:center}
-nav a:not(.btn){text-decoration:none;font-weight:500;font-size:15px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:18px}
+.mark{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:14px;text-decoration:none;color:var(--ink2)}
+.navlinks a:hover{color:var(--ink)}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink)}
+.burger span{display:block;width:16px;height:1.5px;background:currentColor;margin:3px 0}
+.menu{position:fixed;inset:0;z-index:60;background:var(--paper);display:grid;align-content:center;justify-items:center;gap:8px;padding:24px}
+.menu a{font-family:var(--serif);font-size:44px;text-decoration:none}
+.menu .close{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));background:none;border:0;font-size:14px;cursor:pointer;color:var(--ink2)}
+@media (max-width:720px){.navlinks{display:none}.burger{display:block}}
 
 /* hero */
-.herowrap{background:radial-gradient(60% 80% at 85% 20%,#FFFFFF 0%,transparent 60%),linear-gradient(180deg,#D3EFFC 0%,var(--sky) 100%)}
-.hero{padding-block:clamp(28px,4vw,56px) 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:28px;justify-items:center;text-align:center}
-.hero .big{max-width:15ch;margin-inline:auto}
-.hero .big{font-size:clamp(42px,7vw,104px)}
-.hero .big em{font-style:normal;position:relative;white-space:nowrap}
-.hero .big em::after{content:"";position:absolute;left:2%;right:2%;bottom:.02em;height:.07em;border-radius:99px;background:var(--ink);transform:rotate(-1.2deg)}
-.hero-side{display:grid;gap:18px;justify-items:center;max-width:520px}
-.hero-side .dots{display:none}
-.hero-side p{margin:0;font-size:17px;color:var(--ink2)}
-.dots{width:170px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--ink) 1.3px,transparent 1.6px) 0 0/10px 10px;-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%);opacity:.55}
+.hero{text-align:center;padding-block:clamp(64px,9vw,110px) 54px}
+.hero h1{font-family:var(--serif);font-size:clamp(52px,8.4vw,112px);line-height:1;letter-spacing:-.02em}
+.hero .lede{margin:26px auto 0;max-width:44ch;color:var(--ink2);font-size:17px}
+.laurels{margin-top:clamp(56px,8vw,96px);display:grid;gap:12px;justify-items:center}
+.laurels .small{letter-spacing:.02em}
+.laurels ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;max-width:880px}
+.laurels li{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2)}
+.belt{width:100%;max-width:980px;display:flex;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.laurels .belt-track{list-style:none;margin:0;padding:0 34px 0 0;display:flex;flex:none;flex-wrap:nowrap;justify-content:flex-start;max-width:none;gap:34px;white-space:nowrap}
+.belt li{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--ink2)}
+@media (prefers-reduced-motion:no-preference){
+  .belt-track{animation:belt 42s linear infinite}
+  .belt:hover .belt-track{animation-play-state:paused}
+  @keyframes belt{to{transform:translateX(-100%)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .belt{-webkit-mask:none;mask:none;justify-content:center}
+  .laurels .belt-track{flex-wrap:wrap;justify-content:center;white-space:normal;row-gap:10px;flex:1}
+  .belt-track[aria-hidden]{display:none}
+}
+.laurels svg{width:12px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.2}
+.laurels svg.r{transform:scaleX(-1)}
 
-/* ticker */
-.ticker{background:var(--black);color:var(--accent);overflow:hidden;white-space:nowrap;border-block:1px solid var(--black)}
-.track{display:inline-flex;gap:28px;padding-block:14px;animation:marquee 32s linear infinite;font-weight:700;font-size:clamp(24px,3.2vw,40px);letter-spacing:-.02em}
-.track span{display:inline-flex;align-items:center;gap:28px}
-.track span::after{content:"✦";font-size:.7em;color:var(--accent)}
-.track span.hl{color:var(--onblack)}
-@keyframes marquee{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.track{animation:none}}
+/* plates */
+.plate{position:relative;border-radius:16px;overflow:hidden;background:var(--paper2);aspect-ratio:16/9;max-width:100%;display:flex;align-items:center;justify-content:center}
+[hidden]{display:none!important}
+.plate.shot img.flat{box-shadow:none;border-radius:0}
+@media (max-width:640px){.plate{aspect-ratio:4/3}.plate.shot{padding:16px}.pillbtn{right:10px;bottom:10px;padding:7px 12px;font-size:12px}}
+.plate.shot{padding:clamp(20px,4vw,56px)}
+.plate.shot img{max-height:100%;max-width:100%;width:auto;height:auto;border-radius:10px;box-shadow:0 22px 50px rgba(22,21,15,.18)}
+.plate.photo img{width:100%;height:100%;object-fit:cover}
+.pillbtn{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--pill);backdrop-filter:blur(6px);border:0;border-radius:999px;padding:9px 14px 9px 16px;font:500 13px var(--sans);color:var(--ink);text-decoration:none;cursor:pointer}
+.pillbtn i{font-style:normal;transition:transform .3s}
+.pillbtn:hover i{transform:translateX(3px)}
+.hero-plate{margin-top:clamp(40px,6vw,64px)}
 
-section{padding-block:clamp(72px,9vw,120px)}
-.band{background:var(--sky2)}
-.shead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
-.shead .big{font-size:clamp(44px,6.6vw,92px)}
-.shead .mono{max-width:34ch;text-align:right;color:var(--ink2)}
+section{padding-block:clamp(90px,11vw,150px) 0}
+.sec-title{text-align:center;margin-bottom:clamp(40px,6vw,64px)}
+.sec-title h2{font-family:var(--serif);font-size:clamp(36px,4.6vw,56px);line-height:1.05}
+.sec-title p{margin:12px auto 0;color:var(--muted);font-size:14px;max-width:46ch}
 
-/* what I do */
-.what{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:end}
-.what .big{font-size:clamp(42px,6vw,84px);margin-top:18px}
-.what p{margin:0 0 18px;font-size:18px;color:var(--ink2);max-width:42ch}
-.areas{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--ink2)}
+/* intro */
+.intro p{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.35;text-align:center;margin:0}
+.focus{margin-top:26px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.focus span{border:1px solid var(--rule);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--ink2)}
+.focus span.em{border-color:var(--ink);color:var(--ink)}
 
-/* work tiles */
-.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--black);border:2px solid var(--black);border-radius:6px;overflow:hidden}
-.tile{position:relative;background:var(--panel);color:var(--onblack);min-height:clamp(320px,34vw,460px);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:20px 22px;isolation:isolate;text-decoration:none}
-.tile.wide{grid-column:1/-1}
-.tiles .tile{min-height:0;gap:14px;justify-content:flex-start}
-.tiles .tile .top{order:0}
-.tiles .tile .bgimg{order:1;position:relative;inset:auto;z-index:0;aspect-ratio:16/10;max-width:100%;border-radius:10px;overflow:hidden;background:#000}
-.tiles .tile .bottom{order:2}
-.tiles .tile .bgimg img{filter:none}
-.tiles .tile:hover .bgimg img{filter:none;transform:scale(1.03)}
-.tiles .tile .bgimg::after{display:none}
-.tile .bgimg{position:absolute;inset:0;z-index:-1}
-.tile .bgimg img{width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(.85);transition:filter .35s,transform .5s}
-.tile:hover .bgimg img{filter:brightness(.68) saturate(1);transform:scale(1.02)}
-.tile .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65))}
-.tile .top{display:flex;justify-content:space-between;gap:12px;align-items:start}
-.chip{border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35);border-radius:999px;padding:5px 10px;color:var(--onblack)}
-.tile .bottom{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
-.tile h3{margin:0;font-weight:700;font-size:clamp(30px,3.6vw,48px);letter-spacing:-.03em;line-height:1}
-.tile .sub{color:var(--accent);margin-top:8px}
-.stat{text-align:right}
-.stat b{display:block;font-weight:700;font-size:clamp(34px,4vw,54px);letter-spacing:-.03em;line-height:1}
-.stat span{color:var(--accent)}
-
-/* case studies */
-.cases{margin-top:28px;display:grid;gap:10px}
-details{background:var(--sky2);border:1.5px solid var(--ink);border-radius:18px}
-.band details{background:var(--sky)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;font-weight:700;font-size:19px;letter-spacing:-.01em}
-summary::-webkit-details-marker{display:none}
-summary .plus{font-family:var(--mono);font-size:20px;transition:transform .2s}
-details[open] .plus{transform:rotate(45deg)}
-.cs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:4px 20px 22px}
-.cs h4{margin:0 0 8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--muted)}
-.cs p,.cs li{margin:0;font-size:16px;color:var(--ink2)}
-.cs ul{margin:0;padding-left:18px;display:grid;gap:6px}
-.cs .role{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 20px;border-bottom:1px solid var(--line);padding-bottom:14px}
-.cs figure{grid-column:1/-1;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.cs figure img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;border:1.5px solid var(--ink)}
-.cs figcaption{grid-column:1/-1;color:var(--muted);font-size:13px}
-.links{display:flex;gap:8px;flex-wrap:wrap;grid-column:1/-1}
-.decisions{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
-.decisions h4{grid-column:1/-1;margin:0}
-.decisions div{display:grid;gap:4px}
-.decisions b{font-weight:700;font-size:16.5px;letter-spacing:-.01em}
-.decisions p{font-size:15.5px}
-.next{grid-column:1/-1;background:var(--sky);border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
-.band .next,details .next{background:color-mix(in srgb,var(--sky) 70%,white)}
-.next p{flex:1;min-width:220px}
 /* how I work */
-.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--ink);border:1.5px solid var(--ink);border-radius:16px;overflow:hidden}
-.step{background:var(--sky2);padding:20px 18px;display:grid;gap:8px;align-content:start;min-width:0}
-.step .n{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-.step h3{margin:0;font-weight:800;font-size:24px;letter-spacing:-.03em}
-.step p{margin:0;color:var(--ink2);font-size:15px}
-.step .eg{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink)}
+.steps li{padding:22px 18px 6px 0;display:grid;gap:8px;align-content:start;position:relative}
+.steps li+li{padding-left:18px;border-left:1px solid var(--rule)}
+.steps .n{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:18px}
+.steps h3{font-family:var(--serif);font-size:28px;line-height:1.05}
+.steps p{margin:0;color:var(--ink2);font-size:14.5px}
+.steps .eg{font-size:12.5px;color:var(--muted)}
+@media (max-width:900px){.steps{grid-template-columns:minmax(0,1fr)}.steps li,.steps li+li{padding:18px 0;border-left:0;border-bottom:1px solid var(--rule)}}
 
-/* more work */
-.grid3{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 20px}
-.grid3 .card{grid-column:span 2}
+/* featured project */
+.project{padding-top:clamp(70px,9vw,120px)}
+.project:first-of-type{padding-top:0}
+.phead{display:grid;grid-template-columns:1fr minmax(0,2fr) 1fr;gap:20px;align-items:start;margin-bottom:28px}
+.phead .cat{font-size:14px;color:var(--ink2);padding-top:14px}
+.phead .ttl{text-align:center}
+.phead h3{font-family:var(--serif);font-size:clamp(38px,4.8vw,60px);line-height:1}
+.phead .sub{margin-top:10px;color:var(--muted);font-size:14px}
+.phead .yr{text-align:right;font-size:14px;color:var(--ink2);padding-top:14px}
+@media (max-width:720px){.phead{grid-template-columns:minmax(0,1fr)}.phead .cat,.phead .yr{text-align:center;padding:0}.phead .yr{order:3}}
 
-.card{display:grid;gap:12px;align-content:start;min-width:0}
-.card .tile{min-height:0;aspect-ratio:4/3;max-width:100%;border-radius:6px}
-.card .tile h3{font-size:clamp(22px,2.2vw,28px)}
-.card p{margin:0;color:var(--ink2);font-size:15.5px}
-.card .meta{color:var(--muted)}
-.art{position:absolute;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle,rgba(142,210,242,.5) 1.2px,transparent 1.5px) 0 0/12px 12px}
-.art i{position:absolute;border-radius:50%;border:1.5px solid var(--accent)}
-.art b{position:absolute;background:var(--accent);border-radius:4px}
+.case{margin-top:36px}
+.case summary{list-style:none;cursor:pointer;display:flex;justify-content:center}
+.case summary::-webkit-details-marker{display:none}
+.case summary span{font-size:14px;color:var(--ink2);border-bottom:1px solid var(--rule);padding-bottom:2px}
+.case[open] summary span{color:var(--muted)}
+.cs{margin-top:40px}
+.cs .meta{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:center;font-size:13px;color:var(--muted);padding-bottom:28px;border-bottom:1px solid var(--rule)}
+.block{padding-block:28px;border-bottom:1px solid var(--rule)}
+.block h4{font-size:13px;color:var(--muted);margin-bottom:10px;letter-spacing:.02em}
+.block p,.block li{font-size:16.5px;color:var(--ink2);margin:0}
+.block .big{font-family:var(--serif);font-size:24px;line-height:1.35;color:var(--ink)}
+.block ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.decision{display:grid;gap:4px;margin-top:16px}
+.decision:first-of-type{margin-top:0}
+.decision b{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);line-height:1.25}
+.cs figure{margin:40px auto 0;max-width:1180px}
+.cs figure .duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cs figure .plate{aspect-ratio:4/3}
+.cs figcaption{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
+.links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 18px;font:500 14px var(--sans);text-decoration:none;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover,.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:transparent;color:var(--ink)}
+@media (max-width:640px){.cs figure .duo{grid-template-columns:minmax(0,1fr)}}
 
-/* toolkit */
-.toolkit{background:var(--black);color:var(--onblack);border-radius:22px;padding:clamp(24px,4vw,44px);display:grid;gap:26px}
-.toolkit .row{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px;align-items:start;border-top:1px solid #2a3338;padding-top:18px}
-.toolkit .row .mono{color:var(--accent);padding-top:8px}
-.pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;border:1.5px solid var(--accent);color:var(--accent)}
-.pill.fill{background:var(--accent);color:var(--black)}
-.pill.white{background:var(--onblack);color:var(--black);border-color:var(--onblack)}
+/* gallery grids */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 18px}
+.gallery.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gitem{display:grid;gap:12px;align-content:start;min-width:0}
+.gitem .plate{aspect-ratio:4/5}
+.gallery.two .gitem .plate{aspect-ratio:4/3}
+.gitem .cap{font-size:14px;color:var(--ink)}
+.gitem .cap span{color:var(--muted)}
+.gitem p{margin:0;font-size:14.5px;color:var(--ink2)}
+.typo{width:100%;height:100%;display:grid;align-content:space-between;padding:24px;text-align:left}
+.typo .t{font-family:var(--serif);font-size:clamp(34px,3.4vw,46px);line-height:1}
+.typo .s{font-size:13px;opacity:.75}
+.typo .tag{justify-self:start;font-size:12px;border:1px solid currentColor;border-radius:999px;padding:4px 10px;opacity:.8}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.gallery,.gallery.two{grid-template-columns:minmax(0,1fr)}}
 
-/* talks */
-.list{border-top:1.5px solid var(--ink)}
-.item{display:grid;grid-template-columns:160px minmax(0,1fr) minmax(0,1.2fr);gap:24px;padding-block:22px;border-bottom:1px solid var(--line)}
-.item h3{margin:0;font-weight:700;font-size:21px;letter-spacing:-.015em;line-height:1.2}
-.item p{margin:0;color:var(--ink2);font-size:15.5px}
-.item .mono{color:var(--muted);padding-top:4px}
+/* rows (toolkit, writing) */
+.rows{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;padding-block:20px;border-bottom:1px solid var(--rule)}
+.row .k{font-size:13px;color:var(--muted);padding-top:4px}
+.row .v{font-family:var(--serif);font-size:22px;line-height:1.35}
+.row .v em{font-style:normal;border-bottom:1px solid var(--ink)}
+.wr{grid-template-columns:200px minmax(0,1fr) minmax(0,1.1fr)}
+.wr h3{font-family:var(--serif);font-size:22px;line-height:1.25}
+.wr p{margin:0;font-size:14.5px;color:var(--ink2)}
+@media (max-width:760px){.row,.wr{grid-template-columns:minmax(0,1fr);gap:6px}}
 
 /* about */
-.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,60px);align-items:start}
-.portrait{border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:100%;border:1.5px solid var(--ink)}
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.portrait{border-radius:16px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
 .portrait img{width:100%;height:100%;object-fit:cover}
-.bio{margin:0 0 30px;font-size:clamp(20px,1.9vw,25px);line-height:1.35;font-weight:500;letter-spacing:-.01em;max-width:40ch}
-.cv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
-.cv .mono{color:var(--muted);margin:0 0 12px;display:block}
-.cv ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.cv li{font-weight:500}
-.cv li span{display:block;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.04em;font-weight:400}
-.club{margin-top:28px;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:stretch;border:1.5px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--sky2)}
-.club img{width:100%;height:100%;min-height:240px;max-height:280px;object-fit:cover;object-position:center 45%}
-.club div{padding:22px 26px;display:grid;gap:8px;align-content:center}
-.club p{font-size:16.5px}
+.bio{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0 0 36px}
+.cv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--ink);padding-top:20px}
+.cv h4{font-size:13px;color:var(--muted);margin-bottom:12px}
+.cv ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:14.5px}
+.cv li span{display:block;font-size:12.5px;color:var(--muted)}
+.orgs{margin-top:28px;display:grid;gap:8px;font-size:14.5px;color:var(--ink2)}
+.orgs b{font-weight:500;color:var(--muted);font-size:13px;display:inline-block;min-width:96px}
+.club{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:center}
+.club .plate{aspect-ratio:16/9}
+.club h3{font-family:var(--serif);font-size:30px;line-height:1.1;margin-bottom:10px}
 .club p{margin:0;color:var(--ink2)}
-.club.talk{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}
-.club.talk img{min-height:220px;max-height:240px}
+@media (max-width:900px){.about,.club{grid-template-columns:minmax(0,1fr)}.cv{grid-template-columns:minmax(0,1fr)}.portrait{max-width:420px}}
+
+.me{margin:clamp(48px,6vw,72px) auto 0;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,4vw,56px);align-items:start;text-align:left;max-width:1060px}
+.me .portrait{max-width:380px}
+.me .bio{font-size:clamp(20px,2vw,25px);margin:0 0 22px}
+.me .focus{justify-content:flex-start;margin:0 0 30px}
+@media (max-width:900px){.me{grid-template-columns:minmax(0,1fr)}.me .portrait{max-width:300px;margin:0 auto}}
+/* contact */
+.contact{text-align:center;padding-block:clamp(110px,14vw,180px)}
+.contact h2{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:1}
+.contact .addr{margin:26px 0 0;font-family:var(--serif);font-size:24px}
+.contact .links{padding-top:22px}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px;font-size:13px;color:var(--muted)}
 
 /* motion */
 @media (prefers-reduced-motion:no-preference){
-  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-  @keyframes draw{from{transform:rotate(-1.2deg) scaleX(0)}to{transform:rotate(-1.2deg) scaleX(1)}}
-  @keyframes spinDots{to{transform:rotate(360deg)}}
-  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-  .hero .big{animation:rise .9s .1s cubic-bezier(.2,.7,.2,1) both}
-  .hero-name{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-  .hero .big em::after{transform-origin:left center;animation:draw .7s .8s cubic-bezier(.6,0,.2,1) both}
-  .hero-side>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-  .hero-side>*:nth-child(1){animation-delay:.25s}
-  .hero-side>*:nth-child(2){animation-delay:.4s}
-  .hero-side>*:nth-child(3){animation-delay:.55s}
-  .hero-side .dots{animation:spinDots 40s linear infinite}
-  .btn:hover{transform:translateY(-2px)}
-  .step,.pill,.club,.card .tile{transition:transform .25s ease,box-shadow .25s ease}
-  .step:hover{transform:translateY(-4px)}
-  .pill:hover{transform:translateY(-2px)}
-  .card .tile:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(14,14,14,.18)}
-  .art i,.art b{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-  .card .tile:hover .art i:nth-child(odd){transform:translateX(-6px)}
-  .card .tile:hover .art i:nth-child(even){transform:translateX(6px)}
-  .card .tile:hover .art b{transform:scaleY(1.08)}
-  .outline{background:linear-gradient(90deg,var(--accent),var(--accent)) left/0% 100% no-repeat;-webkit-background-clip:text;background-clip:text;transition:background-size .9s cubic-bezier(.6,0,.2,1)}
-  footer:hover .outline{background-size:100% 100%}
+  @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
+  .hero h1{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+  .me{animation:up 1s .15s cubic-bezier(.2,.7,.2,1) both}
+  .laurels{animation:up 1s .3s cubic-bezier(.2,.7,.2,1) both}
+  .laurels .belt li{opacity:0;animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+  .laurels .belt li:nth-child(1){animation-delay:.5s}.laurels .belt li:nth-child(2){animation-delay:.62s}.laurels .belt li:nth-child(3){animation-delay:.74s}.laurels .belt li:nth-child(4){animation-delay:.86s}.laurels .belt li:nth-child(5){animation-delay:.98s}.laurels .belt li:nth-child(6){animation-delay:1.1s}
+  .hero-plate{animation:up 1.1s .45s cubic-bezier(.2,.7,.2,1) both}
+  .hero-plate img{animation:settle 2.4s .45s cubic-bezier(.2,.7,.2,1) both}
+  .plate img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .plate:hover img{transform:scale(1.025)}
+  .js .rv{opacity:.001;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+  .js .rv.in{opacity:1;transform:none}
+  .steps{background:linear-gradient(var(--ink),var(--ink)) top left/0 1px no-repeat;border-top-color:transparent;transition:background-size 1.4s cubic-bezier(.6,0,.2,1)}
+  .steps.in{background-size:100% 1px}
+  .rows{border-top-color:transparent;background:linear-gradient(var(--ink),var(--ink)) top left/0 1px no-repeat;transition:background-size 1.2s cubic-bezier(.6,0,.2,1)}
+  .rows.in{background-size:100% 1px}
 }
 
-@media (max-width:960px){.club.talk{grid-template-columns:minmax(0,1fr)}}
-
-.marks{margin-top:28px;border-top:1.5px solid var(--ink);padding-top:18px;display:grid;gap:14px}
-.marks .rowm{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:baseline}
-.marks .rowm .mono{color:var(--muted)}
-.marks ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 30px}
-.marks li{font-weight:800;font-size:clamp(20px,2.2vw,28px);letter-spacing:-.03em;color:var(--ink2)}
-.marks li small{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-left:6px}
-@media (max-width:640px){.marks .rowm{grid-template-columns:minmax(0,1fr);gap:6px}}
-
-/* how I work */
-.howwork{padding-bottom:0}
-.hw{--i:0;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding:6px 4px 10px}
-.hw::-webkit-scrollbar{display:none}
-.hw-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr);align-items:stretch;min-width:980px}
-.hw-step{position:relative;overflow:hidden;background:var(--sky2);border:1.5px solid var(--ink);border-radius:16px;padding:20px 18px 26px;display:grid;gap:8px;align-content:start;cursor:pointer;outline:none;transition:background .45s,color .45s,transform .45s,box-shadow .45s}
-.hw-n{color:var(--muted);transition:color .45s}
-.hw-step h3{margin:0;font-weight:800;font-size:24px;letter-spacing:-.03em;line-height:1.05}
-.hw-step p{margin:0;color:var(--ink2);font-size:15px;transition:color .45s}
-.hw-eg{color:var(--muted);margin-top:4px;transition:color .45s}
-.hw-bar{position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--accent)}
-.hw-step.on{background:var(--black);color:var(--onblack);transform:translateY(-6px);box-shadow:0 16px 30px rgba(14,14,14,.2)}
-.hw-step.on p{color:#cfdbe2}
-.hw-step.on .hw-n,.hw-step.on .hw-eg{color:var(--accent)}
-.hw-step.done{background:color-mix(in srgb,var(--accent) 22%,var(--sky2))}
-.hw-step:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.hw-arrow{display:grid;place-items:center;color:var(--line)}
-.hw-arrow svg{width:36px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:color .45s}
-.hw-arrow .flow{stroke-dasharray:4 6}
-.hw-arrow.lit{color:var(--ink)}
+/* ---- motion & visual upgrade ---- */
+.hero h1 em{font-style:italic}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block}
+header{transition:box-shadow .4s}
+header.scrolled{box-shadow:0 1px 0 var(--rule)}
+.prog{position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.bars{display:grid;gap:10px;align-self:center;font-size:12px}
+.bars>div{display:grid;grid-template-columns:78px minmax(0,1fr) 34px;align-items:center;gap:10px}
+.bars .bar{height:8px;border-radius:99px;background:linear-gradient(var(--ink),var(--ink)) left/var(--w) 100% no-repeat,rgba(22,21,15,.1)}
+.bars .x{font-family:var(--serif);font-size:16px;text-align:right}
+.dots{display:grid;grid-template-columns:repeat(7,10px);gap:10px;justify-self:end;align-self:start;margin-top:-26px}
+.dots i{width:10px;height:10px;border-radius:50%;border:1px solid currentColor;opacity:.45}
+.typo{grid-template-rows:auto 1fr auto}
+.typo>div:last-child{align-self:end}
+.steps li::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s cubic-bezier(.6,0,.2,1)}
+.steps li:hover::before{transform:scaleX(1)}
+.steps li:hover .n{color:var(--ink)}
+.steps .n{transition:color .3s}
+.row .v em{border-bottom:0;background:linear-gradient(var(--ink),var(--ink)) left bottom/100% 1px no-repeat;padding-bottom:1px}
+.row{transition:padding .4s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.row:hover{padding-left:10px}}
+.marq{overflow:hidden;padding-block:clamp(40px,6vw,80px) clamp(30px,4vw,50px);border-top:1px solid var(--rule)}
+.marq-in{display:flex;width:max-content;gap:.45em;font-family:var(--serif);font-size:clamp(48px,7vw,104px);line-height:1;color:var(--ink);white-space:nowrap;letter-spacing:-.02em}
+.marq-in span:nth-child(even){color:var(--muted)}
+.cursor{position:fixed;left:0;top:0;z-index:80;pointer-events:none;background:var(--ink);color:var(--paper);font-size:13px;font-weight:500;border-radius:999px;padding:10px 16px;opacity:0;transform:translate(-50%,-50%) scale(.6);transition:opacity .25s,transform .25s cubic-bezier(.2,.7,.2,1);white-space:nowrap}
+.cursor.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media (hover:hover) and (pointer:fine){.project .plate.shot{cursor:none}.project .plate.shot .pillbtn{cursor:pointer}}
 @media (prefers-reduced-motion:no-preference){
-  .hw-arrow .flow{animation:flow .9s linear infinite}
-  .hw-arrow.lit .flow{animation-duration:.45s}
-  @keyframes flow{to{stroke-dashoffset:-20}}
-  .hw-step.on .hw-bar{animation:fillbar 2.4s linear forwards}
-  @keyframes fillbar{to{width:100%}}
+  .hero h1{animation:none}
+  .hero h1 .w>span{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 .w:nth-child(2)>span{animation-delay:.08s}.hero h1 .w:nth-child(3)>span{animation-delay:.16s}.hero h1 .w:nth-child(4)>span{animation-delay:.24s}
+  @keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+  .me .portrait img{animation:settle 2s .25s cubic-bezier(.2,.7,.2,1) both}
+  .focus span{opacity:0;animation:up .6s cubic-bezier(.2,.7,.2,1) both}
+  .focus span:nth-child(1){animation-delay:.55s}.focus span:nth-child(2){animation-delay:.6s}.focus span:nth-child(3){animation-delay:.65s}.focus span:nth-child(4){animation-delay:.7s}.focus span:nth-child(5){animation-delay:.75s}.focus span:nth-child(6){animation-delay:.8s}
+  .js .plate.rv{opacity:1;transform:none;clip-path:inset(7% 5% 0 5% round 16px);transition:clip-path 1.3s cubic-bezier(.6,0,.2,1)}
+  .js .plate.rv.in{clip-path:inset(0 0 0 0 round 16px)}
+  .js .gitem.rv .plate{clip-path:inset(0 0 22% 0 round 16px);transition:clip-path 1.2s cubic-bezier(.6,0,.2,1) var(--d,0ms)}
+  .js .gitem.rv.in .plate{clip-path:inset(0 0 0 0 round 16px)}
+  .plate.shot img{translate:0 var(--py,0px)}
+  .js .gitem .bars .bar{background-size:0 100%,auto;transition:background-size 1.4s .5s cubic-bezier(.6,0,.2,1)}
+  .js .gitem.in .bars .bar{background-size:var(--w) 100%,auto}
+  .dots i{animation:blink 3.2s ease-in-out infinite;animation-delay:calc(var(--i,0) * 90ms)}
+  @keyframes blink{0%,100%{background:transparent;opacity:.45}40%{background:currentColor;opacity:.9}}
+  .js .row .v em{background-size:0 1px;transition:background-size .9s .35s cubic-bezier(.6,0,.2,1)}
+  .js .row.in .v em{background-size:100% 1px}
+  .case[open] .cs{animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+  .case[open] figure{animation:up .9s .15s cubic-bezier(.2,.7,.2,1) both}
+  .marq-in{animation:marq 60s linear infinite}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  .pillbtn{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .pillbtn:hover{transform:translateY(-2px)}
 }
-.hw-hint{display:none;margin-top:8px;color:var(--muted)}
-@media (max-width:1040px){.hw-hint{display:block}}
-
-/* ===== visual upgrade ===== */
-header{position:sticky}
-.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--ink);transform-origin:left;transform:scaleX(var(--p,0))}
-.herowrap{position:relative;overflow:hidden}
-.floaters{position:absolute;inset:0;pointer-events:none;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.fl{position:absolute;display:block}
-img.fl{width:clamp(110px,11vw,170px);aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1.5px solid var(--ink);box-shadow:0 14px 30px rgba(14,14,14,.16);background:#fff}
-.f1{left:4%;top:16%;rotate:-7deg}
-.f2{right:5%;top:12%;rotate:6deg;aspect-ratio:3/4!important;width:clamp(90px,8vw,130px)!important}
-.f3{left:7%;bottom:12%;rotate:5deg;object-position:top}
-.f4{right:7%;bottom:14%;rotate:-5deg}
-.chipf{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--black);color:var(--accent);border-radius:999px;padding:6px 12px;white-space:nowrap}
-.c1{left:15%;top:8%}.c2{right:16%;top:6%}.c3{left:2%;top:52%}.c4{right:3%;top:56%}
-@media (max-width:1100px){.floaters{display:none}}
-.hero{position:relative;z-index:1}
-.hero .big .w{display:inline-block}
-
-.mq-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:center}
-.mq-lbl{color:var(--muted)}
-.mq{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.mq-track{display:inline-flex;gap:0;white-space:nowrap}
-.mq-track span{font-weight:800;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.03em;color:var(--ink2);padding-right:36px;display:inline-flex;align-items:center;gap:36px}
-.mq-track span::after{content:"✦";font-size:.55em;color:var(--line)}
-@media (max-width:640px){.mq-row{grid-template-columns:minmax(0,1fr);gap:6px}}
-
-.contact .big{padding-bottom:.12em;background:linear-gradient(100deg,var(--ink) 0 40%,#3d8fb8 50%,var(--ink) 60% 100%) 0 0/250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
-.portrait{position:relative}
-.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%) -100% 0/250% 100% no-repeat;pointer-events:none}
-
-@media (prefers-reduced-motion:no-preference){
-  @keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -14px}}
-  @keyframes popin{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
-  .fl{animation:popin .7s cubic-bezier(.2,.8,.2,1.2) both,floaty 6s ease-in-out infinite}
-  .f1{animation-delay:.9s,1.6s}.f2{animation-delay:1s,0s}.f3{animation-delay:1.1s,.8s}.f4{animation-delay:1.2s,2.2s}
-  .c1{animation-delay:1.3s,.4s}.c2{animation-delay:1.35s,1.2s}.c3{animation-delay:1.4s,2s}.c4{animation-delay:1.45s,.2s}
-  .hero .big{animation:none}
-  .hero .big .w{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--k) * 70ms)}
-  .hero .big em::after{animation-delay:1.1s}
-  .mq-track{animation:mq 38s linear infinite}
-  .mq.rev .mq-track{animation-direction:reverse}
-  @keyframes mq{to{transform:translateX(-50%)}}
-  .marks:hover .mq-track{animation-play-state:paused}
-  .contact .big{animation:shimmer 7s ease-in-out infinite}
-  @keyframes shimmer{0%,100%{background-position:100% 0}50%{background-position:0 0}}
-  .portrait:hover::after{transition:background-position 1s;background-position:100% 0}
-  .portrait img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-  .portrait:hover img{transform:scale(1.04)}
-  .club img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-  .club:hover img{transform:scale(1.04)}
-  .tiles .tile .bgimg img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-
-  /* reveal on scroll (JS-driven, starts visible-ish) */
-  .js .rv{opacity:.25;translate:0 34px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),translate .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
-  .js .rv.in{opacity:1;translate:0 0}
-  .js .shead .big{clip-path:inset(0 100% 0 0);transition:clip-path 1s cubic-bezier(.6,0,.2,1)}
-  .js .shead.in .big{clip-path:inset(0 0 0 0)}
-  /* art covers come alive */
-  .art b{transform-origin:bottom;scale:1 .1;transition:scale 1s cubic-bezier(.2,.8,.2,1.1)}
-  .card.in .art b{scale:1 1}
-  .card.in .art b:nth-child(2){transition-delay:.12s}.card.in .art b:nth-child(3){transition-delay:.24s}.card.in .art b:nth-child(4){transition-delay:.36s}
-  .art i{animation:orbit 9s ease-in-out infinite}
-  .art i:nth-child(2){animation-delay:-3s}.art i:nth-child(3){animation-delay:-6s}
-  @keyframes orbit{0%,100%{translate:0 0}50%{translate:8px -6px}}
-  .pills .pill{transition:transform .25s ease,opacity .6s,translate .6s;transition-delay:0s,var(--d,0ms),var(--d,0ms)}
-  .js .toolkit .row:not(.in) .pill{opacity:0;translate:0 10px}
-}
-/* contact */
-.contact .big{font-size:clamp(56px,10vw,150px)}
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
-.facts .mono{color:var(--muted);display:block;margin-bottom:6px}
-.facts b{font-weight:600;font-size:18px;word-break:break-word}
-.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:32px}
-
-footer{background:var(--black);color:var(--onblack);overflow:hidden}
-footer .max{padding-block:44px 28px;display:grid;gap:28px}
-.ftop{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--accent)}
-.ftop a{text-decoration:none}
-.outline{padding-bottom:.12em;font-weight:800;letter-spacing:-.05em;line-height:.85;font-size:clamp(64px,15vw,230px);color:transparent;-webkit-text-stroke:1.5px var(--accent);white-space:nowrap}
-.fbot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#8a9aa3}
-
-@media (max-width:960px){
-  .hero{grid-template-columns:minmax(0,1fr)}
-  .dots{display:none}
-  .what,.about,.club{grid-template-columns:minmax(0,1fr)}
-  .cs{grid-template-columns:minmax(0,1fr)}
-  .decisions{grid-template-columns:minmax(0,1fr)}
-  .steps{grid-template-columns:minmax(0,1fr)}
-  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .grid3 .card,.grid3 .card:nth-child(4),.grid3 .card:nth-child(5){grid-column:span 1}
-  .grid3 .card:nth-child(4) .tile,.grid3 .card:nth-child(5) .tile{aspect-ratio:4/3}
-  .item{grid-template-columns:minmax(0,1fr);gap:6px}
-  .cv{grid-template-columns:minmax(0,1fr)}
-  .portrait{max-width:380px}
-  .shead .mono{text-align:left}
-}
-@media (max-width:640px){
-  nav .hide-s{display:none}
-  .tiles{grid-template-columns:minmax(0,1fr)}
-  .grid3{grid-template-columns:minmax(0,1fr)}
-  .cs figure{grid-template-columns:minmax(0,1fr)}
-  .toolkit .row{grid-template-columns:minmax(0,1fr)}
-  .facts{grid-template-columns:minmax(0,1fr)}
-}
+@media (prefers-reduced-motion:reduce){.prog{display:none}.cursor{display:none}}
 </style>
+
 </head>
 <body>
-
-
-<header class="g"><span class="progress" aria-hidden="true"></span><div class="max">
-  <a class="logo" href="#top">Jinkyeong Lee</a>
-  <nav aria-label="Main">
-    <a class="hide-s" href="#work">Work</a><a class="hide-s" href="#writing">Writing</a><a class="hide-s" href="#about">About</a>
-    <a class="btn" href="#contact">Get in touch →</a>
-  </nav>
-</div></header>
+<header class="g" id="hdr"><div class="wrap">
+  <a class="mark" href="#top">Jinkyeong Lee</a>
+  <nav class="navlinks" aria-label="Main"><a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</div><span class="prog" aria-hidden="true"></span></header>
+<div class="menu" id="menu" hidden>
+  <button class="close" id="menuClose" type="button">Close</button>
+  <a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a>
+</div>
 
 <main id="top">
-  <div class="g herowrap"><div class="floaters" aria-hidden="true">
-    <img class="fl f1" src="img/wisdom-island.webp" alt="">
-    <img class="fl f2" src="img/ai4kids-screen.webp" alt="">
-    <img class="fl f3" src="img/chatbot-ui.webp" alt="">
-    <img class="fl f4" src="img/playbook-cover.webp" alt="">
-    <span class="fl chipf c1">AI literacy</span><span class="fl chipf c2">AI ethics</span><span class="fl chipf c3">EU AI Act</span><span class="fl chipf c4">Ages 4–14</span>
-  </div><div class="max hero">
-    <div>
-    <h1 class="big">Build research-grounded AI products for <em>kids</em> &amp; society.</h1></div>
-    <div class="hero-side">
-      <div class="dots" aria-hidden="true"></div>
-      <p>I turn research on AI ethics and child development into products people can use, from problem framing to working prototype.</p>
-      <a class="btn" href="#work">See the work →</a>
+  <div class="g"><div class="wrap">
+    <div class="hero">
+      <h1 aria-label="Safe AI for Society."><span class="w" aria-hidden="true"><span>Safe</span></span> <span class="w" aria-hidden="true"><span>AI</span></span> <span class="w" aria-hidden="true"><span>for</span></span> <span class="w" aria-hidden="true"><span><em>Society.</em></span></span></h1>
+      <div class="me" id="about">
+        <div class="portrait"><img src="img/portrait-tee.webp" alt="Portrait of Jinkyeong Lee, smiling, arms crossed" width="880" height="1100" fetchpriority="high"></div>
+        <div class="me-text">
+          <p class="bio">I build research-grounded AI products for kids and society. Before AI, I spent five years in supply chain and process automation at LG Electronics and Webasto, turning regulations and messy operations into systems that run. Now I design the learning, the flows and the guardrails, and build prototypes that make them real.</p>
+          <div class="focus"><span class="em">AI literacy</span><span class="em">AI ethics</span><span>AI product</span><span>AI for good</span><span>Safe &amp; responsible AI</span><span>AI for kids</span></div>
+          <div class="cv">
+          <div><h4>Now</h4><ul><li>MSc AI in Society, TUM<span>2024 – 2027 (expected)</span></li><li>CEO &amp; Co-Founder, DoranDoran<span>2026 – present</span></li><li>Founding Member, TUM Social AI<span>2025 – present</span></li></ul></div>
+          <div><h4>Industry</h4><ul><li>EV Battery SCM Strategy Analyst, Webasto<span>2022 – 2023</span></li><li>Supply Chain Operations Analyst (RPA), LG Electronics<span>2019 – 2022</span></li><li>Product Strategy Analyst, MOBIS Parts Europe<span>2018 – 2019</span></li></ul></div>
+          <div><h4>Also</h4><ul><li>MSc Management, Cranfield School of Management<span>2016 – 2017</span></li><li>Korean · English · German</li></ul></div>
+        </div>
+        <div class="orgs">
+          <div><b>Worked at</b>LG Electronics · Webasto · MOBIS Parts Europe · TUM</div>
+          <div><b>Worked with</b>TUM Social AI · InitiativGruppe · UN Women (project collaboration) · TUM Venture Labs</div>
+        </div>
+        </div>
+      </div>
+      <div class="laurels">
+        <span class="small">Highlights</span>
+        <div class="belt" aria-label="Highlights">
+          <ul class="belt-track">
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Co-Founder, DoranDoran<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Founding Member, Germany's only student initiative combining AI, social impact and entrepreneurship<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>X, The Moonshot Factory pitch 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>TUM Future of Learning 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Microsoft Hackathon 2nd 2025<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>UN Women collaboration 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+        </ul>
+          <ul class="belt-track" aria-hidden="true">
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Co-Founder, DoranDoran<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Founding Member, Germany's only student initiative combining AI, social impact and entrepreneurship<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>X, The Moonshot Factory pitch 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>TUM Future of Learning 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>Microsoft Hackathon 2nd 2025<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+          <li><svg viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg>UN Women collaboration 2026<svg class="r" viewBox="0 0 12 18"><path d="M10 1C4 5 3 12 7 17M4 5c2 0 3 1 3 3M3 9c2 0 3 1 3 3"/></svg></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="plate shot hero-plate" style="background:#E9E4F8">
+      <img class="flat" src="img/little-aiki.webp" alt="Little AIKi by DoranDoran: landing screen and home screen with sea zones and today's adventures">
+      <a class="pillbtn" href="#work">Selected work <i>›</i></a>
     </div>
   </div></div>
 
-  <div class="ticker" aria-label="Focus areas: AI Literacy, AI Ethics, AI Product, AI for Good, Safe and Responsible AI, AI for Kids">
-    <div class="track" aria-hidden="true">
-      <span class="hl">AI Literacy</span><span class="hl">AI Ethics</span><span>AI Product</span><span>AI for Good</span><span>Safe &amp; Responsible AI</span><span>AI for Kids</span>
-      <span class="hl">AI Literacy</span><span class="hl">AI Ethics</span><span>AI Product</span><span>AI for Good</span><span>Safe &amp; Responsible AI</span><span>AI for Kids</span>
-    </div>
-  </div>
-
-  <section class="band g"><div class="max what">
-    <div><span class="mono label">What I do</span><h2 class="big">From research to working prototype.</h2></div>
-    <div>
-      <p>MSc AI in Society at TUM, five years of supply chain and process automation before that. I design the learning, the flows and the guardrails, and build prototypes that make them real.</p>
-      <div class="areas mono"><span class="label" style="color:var(--ink);font-weight:500">AI literacy</span><span class="label" style="color:var(--ink);font-weight:500">AI ethics</span><span class="label">AI product</span><span class="label">AI for good</span><span class="label">Safe &amp; responsible AI</span><span class="label">AI for kids</span></div>
-    </div>
+  <section class="g"><div class="wrap">
+    <div class="sec-title rv"><h2>How I work</h2><p>The same five steps in every project below.</p></div>
+    <ol class="steps" id="steps">
+      <li class="rv"><span class="n">i.</span><h3>Ground</h3><p>Start from evidence: developmental psychology, learning science and the rules that apply, from the EU AI Act to GDPR.</p><span class="eg">e.g. Smart Kids, Safe AI</span></li>
+      <li class="rv"><span class="n">ii.</span><h3>Define</h3><p>Frame the problem with the people who have it: parents, teachers, an NGO, a UN team.</p><span class="eg">e.g. InitiativGruppe</span></li>
+      <li class="rv"><span class="n">iii.</span><h3>Design</h3><p>Design the learning flow, the product flow and the guardrails together, not one after the other.</p><span class="eg">e.g. AI4KIDs</span></li>
+      <li class="rv"><span class="n">iv.</span><h3>Prototype</h3><p>Make it real enough to test: Figma, a web prototype, a working frontend.</p><span class="eg">e.g. Little AIKi</span></li>
+      <li class="rv"><span class="n">v.</span><h3>Put it in hands</h3><p>Pilot with families, demo to partners, hand over, and decide what comes next.</p><span class="eg">e.g. Pilot · Demo Day</span></li>
+    </ol>
   </div></section>
 
+  <section class="g" id="work"><div class="wrap">
+    <div class="sec-title rv"><h2>Selected work</h2><p>Four projects, from problem to result.</p></div>
 
-  <section class="g howwork"><div class="max">
-    <div class="shead"><h2 class="big">How I work</h2><span class="mono">The same five steps in every project below</span></div>
-    <div class="hw" id="hw">
-      <ol class="hw-list">
-        <li class="hw-step" data-i="0" tabindex="0"><span class="hw-n mono">01</span><h3>Ground</h3><p>Start from evidence: developmental psychology, learning science and the rules that apply, from the EU AI Act to GDPR.</p><span class="hw-eg mono">e.g. Smart Kids, Safe AI</span><span class="hw-bar" aria-hidden="true"></span></li>
-        <li class="hw-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><path class="flow" d="M2 12H34"/><path d="M27 5l8 7-8 7"/></svg></li>
-        <li class="hw-step" data-i="1" tabindex="0"><span class="hw-n mono">02</span><h3>Define</h3><p>Frame the problem with the people who have it: parents, teachers, an NGO, a UN team.</p><span class="hw-eg mono">e.g. InitiativGruppe</span><span class="hw-bar" aria-hidden="true"></span></li>
-        <li class="hw-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><path class="flow" d="M2 12H34"/><path d="M27 5l8 7-8 7"/></svg></li>
-        <li class="hw-step" data-i="2" tabindex="0"><span class="hw-n mono">03</span><h3>Design</h3><p>Design the learning flow, the product flow and the guardrails together, not one after the other.</p><span class="hw-eg mono">e.g. AI4KIDs</span><span class="hw-bar" aria-hidden="true"></span></li>
-        <li class="hw-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><path class="flow" d="M2 12H34"/><path d="M27 5l8 7-8 7"/></svg></li>
-        <li class="hw-step" data-i="3" tabindex="0"><span class="hw-n mono">04</span><h3>Prototype</h3><p>Make it real enough to test: Figma, a web prototype, a working frontend.</p><span class="hw-eg mono">e.g. Wisdom Island</span><span class="hw-bar" aria-hidden="true"></span></li>
-        <li class="hw-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><path class="flow" d="M2 12H34"/><path d="M27 5l8 7-8 7"/></svg></li>
-        <li class="hw-step" data-i="4" tabindex="0"><span class="hw-n mono">05</span><h3>Put it in hands</h3><p>Pilot with families, demo to partners, hand over, and decide what comes next.</p><span class="hw-eg mono">e.g. Pilot · Demo Day</span><span class="hw-bar" aria-hidden="true"></span></li>
-      </ol>
-    </div>
-    <span class="hw-hint mono">Swipe to see all five steps →</span>
+    <!-- 01 -->
+    <article class="project">
+      <div class="phead rv"><span class="cat">AI for kids</span><div class="ttl"><h3>Little AIKi</h3><p class="sub">Gen AI native playground fostering kids' agency and creativity · DoranDoran</p></div><span class="yr">2026</span></div>
+      <div class="plate shot rv" style="background:#E9E4F8"><img class="flat" src="img/little-aiki.webp" alt="Little AIKi landing screen (Dive in, think and play with AI) and home screen with sea zones and today's adventures" loading="lazy"><button class="pillbtn" type="button" data-open="c1">Read case study <i>›</i></button></div>
+      <details class="case narrow" id="c1"><summary><span>Read the case study</span></summary>
+        <div class="cs">
+          <div class="meta"><span>Role: CEO &amp; co-founder · led curriculum and product design end to end</span><span>Team: 3 co-founders + freelance game developer</span><span>Ages 5–10 · KR / EN / DE</span><span>Formerly Wisdom Island</span></div>
+          <div class="block"><h4>Problem</h4><p class="big">Children meet AI before they can question it. Popular apps for this age teach letters and numbers, but none teach a child to ask why a machine answered the way it did.</p></div>
+          <div class="block"><h4>Process</h4><ul><li>Designed the OSA framework: notice bias in Others, then in Self, then in AI.</li><li>Mapped five ethics pillars across three age bands, starting with a first stage built for 5–6-year-olds: one gesture per action, short spoken lines, no reading required.</li><li>No penalties and no labels: children reflect through Socratic dialogue with a companion character.</li><li>Turned EU AI Act and COPPA requirements into design rules, from data collection to how the AI companion is allowed to speak.</li></ul></div>
+          <div class="block"><h4>Key decisions</h4>
+            <div class="decision"><b>No scores, penalties or labels.</b><p>A five-year-old should never be told she is "biased". The companion reflects her choices back as questions instead.</p></div>
+            <div class="decision"><b>Parent reports describe, they don't diagnose.</b><p>"Often chose the bigger friend" instead of a bias label, so parents don't read a report as a verdict on their child.</p></div>
+            <div class="decision"><b>Collect as little as possible.</b><p>The pilot asked parents only for country and child age, and families never see anyone else's results.</p></div>
+            <div class="decision"><b>AI never blocks play.</b><p>Visual feedback is instant; the companion's AI-generated line is skipped if it takes longer than half a second.</p></div>
+          </div>
+          <div class="block"><h4>Result</h4><p>A web prototype played by about 30 families. Selected through TUM Venture Labs to pitch to X, The Moonshot Factory, as it explores moonshots in education (Sep 2026).</p></div>
+          <div class="block"><h4>Why it matters</h4><p class="big">Within five years, most children will talk to AI before they can read. They will need to question it, not just use it. Little AIKi teaches that habit from age five.</p></div>
+          <div class="block"><h4>Next</h4><p>Replace the prototype's fixed rules with the adaptive dialogue engine, make compliance rules configurable per country, and let children explain their reasoning out loud instead of picking an option.</p></div>
+          <div class="links"><a class="btn solid" href="https://mvp-theta-puce.vercel.app/" target="_blank" rel="noopener">Prototype ↗</a><a class="btn" href="https://dorandoran-web.vercel.app/" target="_blank" rel="noopener">Website ↗</a></div>
+        </div>
+      </details>
+    </article>
+
+    <!-- 02 -->
+    <article class="project">
+      <div class="phead rv"><span class="cat">AI literacy</span><div class="ttl"><h3>AI4KIDs</h3><p class="sub">Product design · TUM</p></div><span class="yr">2025</span></div>
+      <div class="plate shot rv" style="background:var(--f-ai)"><img src="img/ai4kids-screen.webp" alt="AI4KIDs app start screen with a child character and robot companions" loading="lazy"><button class="pillbtn" type="button" data-open="c2">Read case study <i>›</i></button></div>
+      <details class="case narrow" id="c2"><summary><span>Read the case study</span></summary>
+        <div class="cs">
+          <div class="meta"><span>Role: product design · process design · AI literacy test</span><span>Ages 10–14 · TUM · 01/2025</span></div>
+          <div class="block"><h4>Problem</h4><p class="big">When AI literacy was only starting to enter German education, there was little structured, age-appropriate material for 10–14-year-olds.</p></div>
+          <div class="block"><h4>Process</h4><ul><li>Built each lesson on a feed up → feed forward → feedback loop, so learners always know their goal, next step and progress.</li><li>Moved from concepts to practice: what AI is, how neural networks work, a quiz, a block-coding task and a Teachable Machine task.</li><li>Designed an AI literacy test to see where each learner stands.</li></ul></div>
+          <div class="block"><h4>Key decisions</h4>
+            <div class="decision"><b>A feedback loop in every lesson.</b><p>Online learners have no teacher beside them, so each lesson states the goal, the next step and how they're doing.</p></div>
+            <div class="decision"><b>Build, don't just watch.</b><p>Every concept is followed by a hands-on task with a real tool: block coding, then training a model in Teachable Machine.</p></div>
+            <div class="decision"><b>Test first, then place.</b><p>An AI literacy test shows where each learner starts, so the course can meet them there.</p></div>
+          </div>
+          <div class="block"><h4>Result</h4><p>Presented the prototype and received a 1.0, the highest grade in the German system.</p></div>
+          <div class="links"><a class="btn solid" href="https://www.figma.com/proto/gfenXqi2gmXjdb8bY8mU1Q/PW_MOOC-AI4KIDS?node-id=139-318&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=70%3A45&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Figma prototype ↗</a></div>
+        </div>
+        <figure><div class="plate photo" style="aspect-ratio:16/9;background:#fff"><img src="img/ai4kids-flow.webp" alt="Lesson flow: definition, how neural networks work, quiz, block-coding task and Teachable Machine task, linked by feed up, feed forward and feedback prompts" loading="lazy" style="object-fit:contain"></div><figcaption>Lesson flow with feedback loops.</figcaption></figure>
+      </details>
+    </article>
+
+    <!-- 03 -->
+    <article class="project">
+      <div class="phead rv"><span class="cat">AI for good</span><div class="ttl"><h3>InitiativGruppe Assistant</h3><p class="sub">RAG chatbot · TUM Social AI × InitiativGruppe</p></div><span class="yr">2026</span></div>
+      <div class="plate shot rv" style="background:var(--f-ig)"><img src="img/chatbot-ui.webp" alt="InitiativGruppe Assistant chat window greeting users in German and listing course, registration and counselling topics" loading="lazy"><button class="pillbtn" type="button" data-open="c3">Read case study <i>›</i></button></div>
+      <details class="case narrow" id="c3"><summary><span>Read the case study</span></summary>
+        <div class="cs">
+          <div class="meta"><span>Role: problem definition · product flow · process design · frontend</span><span>Team: TUM Social AI project team</span><span>10/2025 – 04/2026 · delivered to partner</span></div>
+          <div class="block"><h4>Problem</h4><p class="big">People with a migration background in Munich struggle to find German classes, registration rules and counselling on the NGO's website, often in a language they don't read well yet.</p></div>
+          <div class="block"><h4>Process</h4><ul><li>Defined requirements with the NGO: German- and mobile-first, multilingual answers, WordPress-ready, low running cost.</li><li>Designed the flow from question to answer with hybrid search (keywords + RAG) over the NGO's public content, refreshed by regular crawling.</li><li>Built the frontend.</li></ul></div>
+          <div class="block"><h4>Key decisions</h4>
+            <div class="decision"><b>Hybrid search, not a free-form chatbot.</b><p>Keywords plus RAG over the NGO's own pages, so answers about courses, registration and fees come from what the NGO actually published.</p></div>
+            <div class="decision"><b>Fit the NGO, not the other way round.</b><p>A small nonprofit can't run new infrastructure, so the assistant reuses its WordPress site and free tiers.</p></div>
+            <div class="decision"><b>Keep answers current.</b><p>Regular crawling updates the knowledge base when the NGO changes its pages, without anyone maintaining it by hand.</p></div>
+          </div>
+          <div class="block"><h4>Result</h4><p>Demonstrated live at TUM Social AI Demo Day (April 2026) and handed over to InitiativGruppe.</p></div>
+          <div class="block"><h4>Next</h4><p>Rollout is the partner's decision. The next step is the WordPress integration and tracking which questions the assistant can't answer yet.</p></div>
+        </div>
+      </details>
+    </article>
+
+    <!-- 04 -->
+    <article class="project">
+      <div class="phead rv"><span class="cat">Safe AI</span><div class="ttl"><h3>Smart Kids, Safe AI</h3><p class="sub">A playbook for parents · TUM</p></div><span class="yr">2026</span></div>
+      <div class="plate shot rv" style="background:var(--f-pb)"><img src="img/playbook-cover.webp" alt="Cover of the playbook Smart Kids, Safe AI, for parents of children aged 4 to 7" loading="lazy"><button class="pillbtn" type="button" data-open="c4">Read case study <i>›</i></button></div>
+      <details class="case narrow" id="c4"><summary><span>Read the case study</span></summary>
+        <div class="cs">
+          <div class="meta"><span>Role: author · research, scenario writing, AI-assisted illustration &amp; layout</span><span>Parents of 4–7-year-olds · Munich · 09/2026</span></div>
+          <div class="block"><h4>Problem</h4><p class="big">A four-year-old talks to a voice assistant before she can read and taps into autoplay before she can choose for herself. Blocking AI or simply allowing it no longer works, and parents are left without a clear role.</p></div>
+          <div class="block"><h4>Process</h4><ul><li>Built on developmental psychology (Piaget's preoperational stage) and guardrail-centred design rather than prohibition.</li><li>Grounded legal examples in the EU AI Act, DSA and GDPR, with German data on young children's media use.</li><li>Wrote five scenarios with one Munich child, Ria, across YouTube and a smart speaker: scenario, struggle, advice, takeaway.</li><li>Chose a guide over a paper because parents need something usable at home.</li></ul></div>
+          <div class="block"><h4>Key decisions</h4>
+            <div class="decision"><b>A guide, not a paper.</b><p>Parents need something they can use the same evening, so every scenario ends with one small action.</p></div>
+            <div class="decision"><b>One age band, 4–7.</b><p>I first covered a wider range, then narrowed it so every piece of advice fits one developmental stage.</p></div>
+            <div class="decision"><b>Guardrails, not bans.</b><p>Blocking AI teaches nothing. The playbook helps a child stay the one in charge instead.</p></div>
+          </div>
+          <div class="block"><h4>Result</h4><p>An illustrated playbook where every scenario ends with one small action a parent can try that day, plus a 60-second explainer video.</p></div>
+        </div>
+        <figure><div class="plate photo" style="aspect-ratio:16/9;background:#fff"><img src="img/playbook-page.webp" alt="Playbook page for the Choice signal: scenario, struggle, advice and takeaway" loading="lazy" style="object-fit:contain"></div><figcaption>The "Choice" scenario page.</figcaption></figure>
+      </details>
+    </article>
   </div></section>
 
-  <section class="g" id="work"><div class="max">
-    <div class="shead"><h2 class="big">Selected work</h2><span class="mono">Four projects, from problem to result</span></div>
-
-    <div class="tiles">
-      <a class="tile" href="#case-dd">
-        <div class="bgimg"><img src="img/wisdom-island.webp" alt="" loading="lazy"></div>
-        <div class="top"><span class="mono">01</span><span class="chip mono">DoranDoran</span></div>
-        <div class="bottom">
-          <div><h3>Wisdom Island</h3><div class="sub mono">AI for kids · Curriculum &amp; product design · 2026</div></div>
-        </div>
-      </a>
-      <a class="tile" href="#case-ai4kids">
-        <div class="bgimg"><img src="img/ai4kids-screen.webp" alt="" loading="lazy" style="object-position:center 40%"></div>
-        <div class="top"><span class="mono">02</span><span class="chip mono">TUM</span></div>
-        <div class="bottom">
-          <div><h3>AI4KIDs</h3><div class="sub mono">AI literacy · Product design · 2025</div></div>
-        </div>
-      </a>
-      <a class="tile" href="#case-ig">
-        <div class="bgimg"><img src="img/chatbot-ui.webp" alt="" loading="lazy" style="object-position:center 0%"></div>
-        <div class="top"><span class="mono">03</span><span class="chip mono">TUM Social AI</span></div>
-        <div class="bottom">
-          <div><h3>InitiativGruppe Assistant</h3><div class="sub mono">AI for good · RAG chatbot · 2026</div></div>
-        </div>
-      </a>
-      <a class="tile" href="#case-pb">
-        <div class="bgimg"><img src="img/playbook-cover.webp" alt="" loading="lazy" style="object-position:center 75%"></div>
-        <div class="top"><span class="mono">04</span><span class="chip mono">TUM</span></div>
-        <div class="bottom">
-          <div><h3>Smart Kids, Safe AI</h3><div class="sub mono">Safe AI · Playbook · 2026</div></div>
-        </div>
-      </a>
-    </div>
-
-    <div class="cases">
-      <details id="case-dd">
-        <summary><span>01 · Wisdom Island case study</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="cs">
-          <div class="role mono"><span>Role: CEO &amp; co-founder · led curriculum and product design end to end</span><span>Team: 3 co-founders + freelance game developer</span><span>Ages 5–10 · KR / EN / DE</span></div>
-          <div><h4>Problem</h4><p>Children meet AI before they can question it. Popular apps for this age teach letters and numbers, but none teach a child to ask why a machine answered the way it did.</p></div>
-          <div><h4>Process</h4><ul><li>Designed the OSA framework: notice bias in Others, then in Self, then in AI.</li><li>Mapped five ethics pillars across three age bands, starting with a first stage built for 5–6-year-olds: one gesture per action, short spoken lines, no reading required.</li><li>No penalties and no labels: children reflect through Socratic dialogue with a companion character.</li><li>Turned EU AI Act and COPPA requirements into design rules, from data collection to how the AI companion is allowed to speak.</li></ul></div>
-          <div><h4>Result</h4><p>A web prototype played by about 30 families. Selected through TUM Venture Labs to pitch to X, The Moonshot Factory, as it explores moonshots in education (Sep 2026).</p><h4 style="margin-top:16px">Why it matters</h4><p>Within five years, most children will talk to AI before they can read. They will need to question it, not just use it. Wisdom Island teaches that habit from age five.</p></div>
-          <div class="decisions"><h4>Key decisions</h4>
-            <div><b>No scores, penalties or labels.</b><p>A five-year-old should never be told she is "biased". The companion reflects her choices back as questions instead.</p></div>
-            <div><b>Parent reports describe, they don't diagnose.</b><p>"Often chose the bigger friend" instead of a bias label, so parents don't read a report as a verdict on their child.</p></div>
-            <div><b>Collect as little as possible.</b><p>The pilot asked parents only for country and child age, and families never see anyone else's results.</p></div>
-            <div><b>AI never blocks play.</b><p>Visual feedback is instant; the companion's AI-generated line is skipped if it takes longer than half a second.</p></div>
-          </div>
-          <div class="next"><span class="mono">Next</span><p>Replace the prototype's fixed rules with the adaptive dialogue engine, make compliance rules configurable per country, and let children explain their reasoning out loud instead of picking an option.</p></div>
-          <figure style="grid-template-columns:minmax(0,1fr)"><img src="img/wisdom-island.webp" alt="Wisdom Island start screen: an island map with four adventures and Chatty the parrot, in English, German and Korean" loading="lazy" style="aspect-ratio:auto;max-height:440px;object-fit:contain;background:var(--sky)"><figcaption>Wisdom Island start screen with four adventures, available in English, German and Korean.</figcaption></figure>
-          <div class="links"><a class="btn" href="https://mvp-theta-puce.vercel.app/" target="_blank" rel="noopener">Prototype ↗</a><a class="btn ghost" href="https://dorandoran-web.vercel.app/" target="_blank" rel="noopener">Website ↗</a></div>
-        </div>
-      </details>
-      <details id="case-ai4kids">
-        <summary><span>02 · AI4KIDs case study</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="cs">
-          <div class="role mono"><span>Role: product design · process design · AI literacy test</span><span>Ages 10–14 · TUM · 01/2025</span></div>
-          <div><h4>Problem</h4><p>When AI literacy was only starting to enter German education, there was little structured, age-appropriate material for 10–14-year-olds.</p></div>
-          <div><h4>Process</h4><ul><li>Built each lesson on a feed up → feed forward → feedback loop, so learners always know their goal, next step and progress.</li><li>Moved from concepts to practice: what AI is, how neural networks work, a quiz, a block-coding task and a Teachable Machine task.</li><li>Designed an AI literacy test to see where each learner stands.</li></ul></div>
-          <div><h4>Result</h4><p>Presented the prototype and received a 1.0, the highest grade in the German system.</p></div>
-          <div class="decisions"><h4>Key decisions</h4>
-            <div><b>A feedback loop in every lesson.</b><p>Online learners have no teacher beside them, so each lesson states the goal, the next step and how they're doing.</p></div>
-            <div><b>Build, don't just watch.</b><p>Every concept is followed by a hands-on task with a real tool: block coding, then training a model in Teachable Machine.</p></div>
-            <div><b>Test first, then place.</b><p>An AI literacy test shows where each learner starts, so the course can meet them there.</p></div>
-          </div>
-          <figure><img src="img/ai4kids-flow.webp" alt="Lesson flow: definition, how neural networks work, quiz, block-coding task and Teachable Machine task, linked by feed up, feed forward and feedback prompts" loading="lazy"><img src="img/ai4kids-app.webp" alt="AI4KIDs app start screen on a tablet" loading="lazy" style="object-fit:contain;background:var(--sky)"><figcaption>Lesson flow with feedback loops, and the app's start screen.</figcaption></figure>
-          <div class="links"><a class="btn" href="https://www.figma.com/proto/gfenXqi2gmXjdb8bY8mU1Q/PW_MOOC-AI4KIDS?node-id=139-318&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=70%3A45&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Figma prototype ↗</a></div>
-        </div>
-      </details>
-      <details id="case-ig">
-        <summary><span>03 · InitiativGruppe Assistant case study</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="cs">
-          <div class="role mono"><span>Role: problem definition · product flow · process design · frontend</span><span>Team: TUM Social AI project team</span><span>10/2025 – 04/2026 · delivered to partner</span></div>
-          <div><h4>Problem</h4><p>People with a migration background in Munich struggle to find German classes, registration rules and counselling on the NGO's website, often in a language they don't read well yet.</p></div>
-          <div><h4>Process</h4><ul><li>Defined requirements with the NGO: German- and mobile-first, multilingual answers, WordPress-ready, low running cost.</li><li>Designed the flow from question to answer with hybrid search (keywords + RAG) over the NGO's public content, refreshed by regular crawling.</li><li>Built the frontend.</li></ul></div>
-          <div><h4>Result</h4><p>Demonstrated live at TUM Social AI Demo Day (April 2026) and handed over to InitiativGruppe.</p></div>
-          <div class="decisions"><h4>Key decisions</h4>
-            <div><b>Hybrid search, not a free-form chatbot.</b><p>Keywords plus RAG over the NGO's own pages, so answers about courses, registration and fees come from what the NGO actually published.</p></div>
-            <div><b>Fit the NGO, not the other way round.</b><p>A small nonprofit can't run new infrastructure, so the assistant reuses its WordPress site and free tiers.</p></div>
-            <div><b>Keep answers current.</b><p>Regular crawling updates the knowledge base when the NGO changes its pages, without anyone maintaining it by hand.</p></div>
-          </div>
-          <div class="next"><span class="mono">Next</span><p>Rollout is the partner's decision. The next step is the WordPress integration and tracking which questions the assistant can't answer yet.</p></div>
-          <figure style="grid-template-columns:minmax(0,1fr)"><img src="img/chatbot-ui.webp" alt="InitiativGruppe Assistant chat window greeting users in German and listing course, registration and counselling topics" loading="lazy" style="aspect-ratio:auto;max-height:520px;width:auto;justify-self:start"><figcaption>The chat interface, German- and mobile-first.</figcaption></figure>
-        </div>
-      </details>
-      <details id="case-pb">
-        <summary><span>04 · Smart Kids, Safe AI case study</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="cs">
-          <div class="role mono"><span>Role: author · research, scenario writing, AI-assisted illustration &amp; layout</span><span>Parents of 4–7-year-olds · Munich · 09/2026</span></div>
-          <div><h4>Problem</h4><p>A four-year-old talks to a voice assistant before she can read and taps into autoplay before she can choose for herself. Blocking AI or simply allowing it no longer works, and parents are left without a clear role.</p></div>
-          <div><h4>Process</h4><ul><li>Built on developmental psychology (Piaget's preoperational stage) and guardrail-centred design rather than prohibition.</li><li>Grounded legal examples in the EU AI Act, DSA and GDPR, with German data on young children's media use.</li><li>Wrote five scenarios with one Munich child, Ria, across YouTube and a smart speaker: scenario, struggle, advice, takeaway.</li><li>Chose a guide over a paper because parents need something usable at home.</li></ul></div>
-          <div><h4>Result</h4><p>An illustrated playbook where every scenario ends with one small action a parent can try that day, plus a 60-second explainer video.</p></div>
-          <div class="decisions"><h4>Key decisions</h4>
-            <div><b>A guide, not a paper.</b><p>Parents need something they can use the same evening, so every scenario ends with one small action.</p></div>
-            <div><b>One age band, 4–7.</b><p>I first covered a wider range, then narrowed it so every piece of advice fits one developmental stage.</p></div>
-            <div><b>Guardrails, not bans.</b><p>Blocking AI teaches nothing. The playbook helps a child stay the one in charge instead.</p></div>
-          </div>
-          <figure><img src="img/playbook-cover.webp" alt="Playbook cover: Smart Kids, Safe AI, a playbook for parents, ages 4 to 7" loading="lazy" style="object-fit:contain;background:var(--sky)"><img src="img/playbook-page.webp" alt="Playbook page for the Choice signal: scenario, struggle, advice and takeaway" loading="lazy" style="object-fit:contain;background:var(--sky)"><figcaption>Cover and the "Choice" scenario page.</figcaption></figure>
-        </div>
-      </details>
-    </div>
-  </div></section>
-
-  <section class="band g"><div class="max">
-    <div class="shead"><h2 class="big">More work</h2><span class="mono">Research and evaluation</span></div>
-    <div class="grid3">
-      <div class="card">
-        <div class="tile"><div class="art"><i style="width:44%;aspect-ratio:1;left:10%;top:22%"></i><i style="width:44%;aspect-ratio:1;right:10%;top:22%"></i><b style="height:3px;width:70%;left:15%;top:62%"></b></div>
-          <div class="top"><span class="mono">05</span><span class="chip mono">Design phase</span></div><div class="bottom"><h3>WRPBench</h3></div></div>
-        <span class="mono meta">TUM Social AI × UN Women · 2026</span>
+  <section class="g"><div class="wrap">
+    <div class="sec-title rv"><h2>More work</h2><p>Research and evaluation.</p></div>
+    <div class="gallery">
+      <div class="gitem rv">
+        <div class="plate" style="background:var(--f-wrp);color:#EDEAE0"><div class="typo"><span class="tag">Design phase</span><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><div class="t">WRPBench</div><div class="s">Women's rights × LLMs</div></div></div></div>
+        <div class="cap">WRPBench <span>× UN Women · 2026</span></div>
         <p>A benchmark for how LLMs behave on women's rights and gender equality, developed with UN Women's Data and Research Team. Co-author; content design and peer review across four policy domains.</p>
       </div>
-      <div class="card">
-        <div class="tile"><div class="art"><b style="width:9%;height:28%;left:20%;bottom:22%"></b><b style="width:9%;height:42%;left:34%;bottom:22%"></b><b style="width:9%;height:20%;left:48%;bottom:22%"></b><b style="width:9%;height:56%;left:62%;bottom:22%"></b></div>
-          <div class="top"><span class="mono">06</span><span class="chip mono">Completed</span></div><div class="bottom"><h3>Beyond Compliance</h3></div></div>
-        <span class="mono meta">TUM · 02/2026</span>
+      <div class="gitem rv">
+        <div class="plate" style="background:var(--f-bc);color:var(--ink)"><div class="typo"><span class="tag">Completed</span><div class="bars" aria-hidden="true"><div><span class="lb">Agency</span><span class="bar" style="--w:100%"></span><span class="x">1.8×</span></div><div><span class="lb">Compliance</span><span class="bar" style="--w:72%"></span><span class="x">1.3×</span></div></div><div><div class="t">Beyond Compliance</div><div class="s">32,593 online learners</div></div></div></div>
+        <div class="cap">Beyond Compliance <span>· TUM · 2026</span></div>
         <p>Learning analytics on 32,593 online learners: top achievers showed 1.8× the agency of diligent followers, against 1.3× the compliance. K-means, ANOVA, chi-square.</p>
       </div>
-      <div class="card">
-        <div class="tile"><div class="bgimg"><img src="img/hackathon.webp" alt="" loading="lazy" style="object-position:center 55%"></div>
-          <div class="top"><span class="mono">07</span><span class="chip mono">2nd place</span></div><div class="bottom"><h3>Healthcare LLM Agent</h3></div></div>
-        <span class="mono meta">Microsoft Office Hackathon · Munich · 07/2025</span>
+      <div class="gitem rv">
+        <div class="plate photo"><img src="img/hackathon.webp" alt="Hackathon participants gathered on the stairs at Microsoft's Munich headquarters" loading="lazy" style="object-position:center 55%"></div>
+        <div class="cap">Healthcare LLM Agent <span>· Microsoft Hackathon, 2nd place · 2025</span></div>
         <p>An autonomous LLM agent for a healthcare use case, built in a team at Microsoft's Munich headquarters. My role: problem framing, solution planning and product design.</p>
       </div>
-          </div>
-  </div></section>
-
-  <section class="g"><div class="max">
-    <div class="shead"><h2 class="big">Toolkit</h2><span class="mono">What I use in the work above</span></div>
-    <div class="toolkit">
-      <div class="row"><span class="mono">Product</span><div class="pills"><span class="pill fill">End-to-end: problem → prototype</span><span class="pill">Problem definition</span><span class="pill white">UI/UX</span><span class="pill">Process design</span><span class="pill">Frontend</span><span class="pill">Figma prototyping</span></div></div>
-      <div class="row"><span class="mono">Learning</span><div class="pills"><span class="pill white">Curriculum design</span><span class="pill">Socratic &amp; game-based learning</span><span class="pill">AI literacy assessment</span></div></div>
-      <div class="row"><span class="mono">AI &amp; data</span><div class="pills"><span class="pill fill">RAG</span><span class="pill white">AI agents</span><span class="pill">LLM evaluation</span><span class="pill">Learning analytics</span><span class="pill">Python</span><span class="pill">RPA</span></div></div>
-      <div class="row"><span class="mono">Policy</span><div class="pills"><span class="pill white">EU AI Act</span><span class="pill">DSA</span><span class="pill">GDPR</span><span class="pill">COPPA</span></div></div>
     </div>
   </div></section>
 
-  <section class="band g" id="writing"><div class="max">
-    <div class="shead"><h2 class="big">Talks &amp; writing</h2></div>
-    <div class="club talk" style="margin:0 0 28px;background:var(--sky)">
-      <img src="img/moonshot-pitch.webp" alt="Pitch cover: Wisdom Island, AI judgment built through play, for X, the moonshot factory and TUM Venture Labs, 2026" loading="lazy" style="object-position:left center">
-      <div><span class="mono">Sep 2026 · Pitch · X, The Moonshot Factory × TUM Venture Labs</span>
-        <h3 style="margin:0;font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1.15">Wisdom Island: AI judgment, built through play</h3>
-        <p>Selected through TUM Venture Labs to pitch DoranDoran to X, The Moonshot Factory, as it explores moonshots in education. An eight-minute pitch on why children need to learn to question AI before they can read.</p></div>
-    </div>
-    <div class="club talk" style="margin:0 0 28px;background:var(--sky)">
-      <img src="img/symposium-poster.webp" alt="Jinkyeong presenting her poster at the TUM Future of Learning Symposium" loading="lazy" style="object-position:center 25%">
-      <div><span class="mono">2026 · Poster session · TUM Future of Learning Symposium</span>
-        <h3 style="margin:0;font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1.15">Nurturing Augmented Agency &amp; Creativity</h3>
-        <p>A proposed multi-agent framework for AI ethics education in early childhood. Children move from passive consumers to active questioners: a Socratic loop, an adversarial character that introduces biases on purpose, and guardrails against labelling and anthropomorphism. Shown with the Wisdom Island demo.</p></div>
-    </div>
-    <div class="list">
-      <div class="item"><span class="mono">2026 · Paper analysis</span><h3>Augmentation or dependency? Interactive AI and human agency</h3><p>Critical analysis of Raees et al. (2024) for The Augmented Human seminar, with a structured search of 15 papers (2020–2025) in four themes.</p></div>
-      <div class="item"><span class="mono">2025 · Paper analysis</span><h3>LLMs for explainability: transparency for everyone?</h3><p>Team analysis of Bilal et al. (2025): can LLMs turn technical explanations such as SHAP into ones non-experts understand, and how should their quality be judged?</p></div>
-      <div class="item"><span class="mono">2026 · Paper</span><h3>The Place of Judgment</h3><p>A multi-sited qualitative study of learner agency and algorithmic authority in AI educational environments.</p></div>
-      <div class="item"><span class="mono">2026 · Essay</span><h3>A binding coalition for Big Tech accountability</h3><p>A multi-stakeholder governance proposal modelled on the UN Global Dialogue on AI Governance, using Carroll's CSR framework.</p></div>
+  <section class="g"><div class="wrap">
+    <div class="sec-title rv"><h2>Toolkit</h2><p>What I use in the work above.</p></div>
+    <div class="rows" id="tk">
+      <div class="row rv"><span class="k">Product</span><span class="v"><em>End-to-end, problem to prototype</em> · Problem definition · UI/UX · Process design · Frontend · Figma prototyping</span></div>
+      <div class="row rv"><span class="k">Learning</span><span class="v"><em>Curriculum design</em> · Socratic &amp; game-based learning · AI literacy assessment</span></div>
+      <div class="row rv"><span class="k">AI &amp; data</span><span class="v"><em>RAG</em> · <em>AI agents</em> · LLM evaluation · Learning analytics · Python · RPA</span></div>
+      <div class="row rv"><span class="k">Policy</span><span class="v"><em>EU AI Act</em> · DSA · GDPR · COPPA</span></div>
     </div>
   </div></section>
 
-  <section class="g" id="about"><div class="max">
-    <div class="shead"><h2 class="big">About</h2></div>
-    <div class="about">
-      <div class="portrait"><img src="img/portrait-tee.webp" alt="Portrait of Jinkyeong Lee, smiling, arms crossed" loading="lazy"></div>
-      <div>
-        <p class="bio">Before AI, I spent five years in supply chain and process automation at LG Electronics and Webasto, turning regulations and messy operations into systems that run. I now bring that habit to AI: taking ethical and legal requirements and making them part of the product.</p>
-        <div class="cv">
-          <div><span class="mono">Now</span><ul>
-            <li>MSc AI in Society, TUM<span>2024 – 2027 (expected)</span></li>
-            <li>CEO &amp; Co-Founder, DoranDoran<span>2026 – present</span></li>
-            <li>Founding Member, TUM Social AI<span>2025 – present</span></li>
-          </ul></div>
-          <div><span class="mono">Industry</span><ul>
-            <li>EV Battery SCM Strategy Analyst, Webasto<span>2022 – 2023</span></li>
-            <li>Supply Chain Operations Analyst (RPA), LG Electronics<span>2019 – 2022</span></li>
-            <li>Product Strategy Analyst, MOBIS Parts Europe<span>2018 – 2019</span></li>
-          </ul></div>
-          <div><span class="mono">Also</span><ul>
-            <li>MSc Management, Cranfield School of Management<span>2016 – 2017</span></li>
-            <li>Korean · English · German</li>
-          </ul></div>
-        </div>
+  <section class="g" id="writing"><div class="wrap">
+    <div class="sec-title rv"><h2>Talks &amp; writing</h2></div>
+    <div class="gallery two">
+      <div class="gitem rv">
+        <div class="plate photo" style="background:#FFF6E4"><img src="img/moonshot-pitch.webp" alt="Pitch cover: Wisdom Island, AI judgment built through play, for X, the moonshot factory and TUM Venture Labs" loading="lazy" style="object-position:left center"></div>
+        <div class="cap">Wisdom Island: AI judgment, built through play <span>· Pitch · Sep 2026</span></div>
+        <p>Selected through TUM Venture Labs to pitch DoranDoran to X, The Moonshot Factory, as it explores moonshots in education. An eight-minute pitch on why children need to learn to question AI before they can read.</p>
+      </div>
+      <div class="gitem rv">
+        <div class="plate photo"><img src="img/symposium-poster.webp" alt="Jinkyeong presenting her poster at the TUM Future of Learning Symposium" loading="lazy" style="object-position:center 25%"></div>
+        <div class="cap">Nurturing Augmented Agency &amp; Creativity <span>· Poster · TUM Future of Learning 2026</span></div>
+        <p>A proposed multi-agent framework for AI ethics education in early childhood: a Socratic loop, an adversarial character that introduces biases on purpose, and guardrails against labelling and anthropomorphism. Shown with the Wisdom Island demo.</p>
       </div>
     </div>
-    <div class="club"><img src="img/socialai.webp" alt="Group photo of TUM Social AI members" loading="lazy"><div><span class="mono">TUM Social AI · Founding Member</span><p>A student initiative building AI solutions with nonprofit partners. I worked on the InitiativGruppe Assistant and WRPBench.</p></div></div>
-    <div class="marks" aria-label="Worked at LG Electronics, Webasto, MOBIS Parts Europe and TUM; worked with TUM Social AI, InitiativGruppe, UN Women (project collaboration) and TUM Venture Labs">
-      <div class="mq-row"><span class="mono mq-lbl">Worked at</span><div class="mq"><div class="mq-track"><span>LG Electronics</span><span>Webasto</span><span>MOBIS Parts Europe</span><span>TUM</span><span>LG Electronics</span><span>Webasto</span><span>MOBIS Parts Europe</span><span>TUM</span><span>LG Electronics</span><span>Webasto</span><span>MOBIS Parts Europe</span><span>TUM</span><span>LG Electronics</span><span>Webasto</span><span>MOBIS Parts Europe</span><span>TUM</span></div></div></div>
-      <div class="mq-row"><span class="mono mq-lbl">Worked with</span><div class="mq rev"><div class="mq-track"><span>TUM Social AI</span><span>InitiativGruppe</span><span>UN Women · project collaboration</span><span>TUM Venture Labs</span><span>TUM Social AI</span><span>InitiativGruppe</span><span>UN Women · project collaboration</span><span>TUM Venture Labs</span><span>TUM Social AI</span><span>InitiativGruppe</span><span>UN Women · project collaboration</span><span>TUM Venture Labs</span><span>TUM Social AI</span><span>InitiativGruppe</span><span>UN Women · project collaboration</span><span>TUM Venture Labs</span></div></div></div>
+    <div class="rows" style="margin-top:56px">
+      <div class="row wr rv"><span class="k">2026 · Paper analysis</span><h3>Augmentation or dependency? Interactive AI and human agency</h3><p>Critical analysis of Raees et al. (2024) for The Augmented Human seminar, with a structured search of 15 papers (2020–2025) in four themes.</p></div>
+      <div class="row wr rv"><span class="k">2025 · Paper analysis</span><h3>LLMs for explainability: transparency for everyone?</h3><p>Team analysis of Bilal et al. (2025): can LLMs turn technical explanations such as SHAP into ones non-experts understand, and how should their quality be judged?</p></div>
+      <div class="row wr rv"><span class="k">2026 · Paper</span><h3>The Place of Judgment</h3><p>A multi-sited qualitative study of learner agency and algorithmic authority in AI educational environments.</p></div>
+      <div class="row wr rv"><span class="k">2026 · Essay</span><h3>A binding coalition for Big Tech accountability</h3><p>A multi-stakeholder governance proposal modelled on the UN Global Dialogue on AI Governance, using Carroll's CSR framework.</p></div>
     </div>
   </div></section>
 
-  <section class="band g contact" id="contact"><div class="max">
-    <h2 class="big">Let's build<br>something useful.</h2>
-    <div class="copyrow"><button type="button" class="btn" id="copy">Copy email →</button><a class="btn ghost" href="https://www.linkedin.com/in/jinkyeonglee/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
-    <div class="facts">
-      <div><span class="mono">Email</span><b id="mail">jin-kyeong.lee@tum.de</b></div>
-      <div><span class="mono">Based in</span><b>Munich · working in English</b></div>
-      <div><span class="mono">Focus</span><b>AI literacy &amp; AI ethics for kids and society</b></div>
+  
+
+  <section class="g"><div class="wrap">
+    <div class="club rv" style="margin-top:0">
+      <div class="plate photo"><img src="img/socialai.webp" alt="Group photo of TUM Social AI members" loading="lazy" style="object-position:center 40%"></div>
+      <div><p class="small" style="margin-bottom:8px">Founding Member</p><h3>TUM Social AI</h3><p>A student initiative building AI solutions with nonprofit partners. I worked on the InitiativGruppe Assistant and WRPBench.</p></div>
     </div>
   </div></section>
+
+  <section class="g contact" id="contact"><div class="wrap rv">
+    <h2>Let's talk.</h2>
+    <p class="addr" id="mail">jin-kyeong.lee@tum.de</p>
+    <div class="links"><button class="btn solid" type="button" id="copy">Copy email</button><a class="btn" href="https://www.linkedin.com/in/jinkyeonglee/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  </div></section>
+  <div class="marq" aria-hidden="true"><div class="marq-in"><span>Safe AI for Society</span><span>·</span><span><em>AI literacy</em></span><span>·</span><span>AI ethics</span><span>·</span><span><em>AI for kids</em></span><span>·</span><span>Safe AI for Society</span><span>·</span><span><em>AI literacy</em></span><span>·</span><span>AI ethics</span><span>·</span><span><em>AI for kids</em></span><span>·</span></div></div>
 </main>
 
-<footer class="g"><div class="max">
-  <div class="ftop mono"><span>Jinkyeong Lee · AI product × research × education</span><a href="https://www.linkedin.com/in/jinkyeonglee/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
-  <div class="outline" aria-hidden="true">jinkyeong*</div>
-  <div class="fbot mono"><span>© 2026 Jinkyeong Lee</span><span>Munich</span></div>
-</div></footer>
+<div class="cursor" id="cur" aria-hidden="true">Case study</div>
+<footer class="g"><div class="wrap"><span>© 2026 Jinkyeong Lee</span><span>Safe AI for Society · Munich</span></div></footer>
 
 <script>
 (function(){
   document.documentElement.classList.add('js');
-  // headline word split
-  (function(){
-    var h=document.querySelector('.hero .big'); if(!h) return; var k=0;
-    [].slice.call(h.childNodes).forEach(function(n){
-      if(n.nodeType===3){var f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(function(w){
-        if(!w) return; if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(w));return;}
-        var sp=document.createElement('span');sp.className='w';sp.style.setProperty('--k',k++);sp.textContent=w;f.appendChild(sp);});
-        h.replaceChild(f,n);}
-      else if(n.nodeType===1){n.classList.add('w');n.style.setProperty('--k',k++);}
-    });
-  })();
-  // scroll progress
-  (function(){var hd=document.querySelector('header');function u(){var d=document.documentElement;var p=d.scrollTop/((d.scrollHeight-d.clientHeight)||1);hd.style.setProperty('--p',Math.min(1,Math.max(0,p)));}
-    addEventListener('scroll',u,{passive:true});u();})();
   // reveal
-  (function(){
-    var sel='.shead,.tiles .tile,.cases details,.card,.toolkit .row,.club,.item,.marks,.cv>div,.bio,.facts>div,.what>div';
-    var els=[].slice.call(document.querySelectorAll(sel));
-    els.forEach(function(el){el.classList.add('rv');});
-    document.querySelectorAll('.tiles,.grid3,.cv,.facts,.what').forEach(function(g){[].slice.call(g.children).forEach(function(c,i){c.style.setProperty('--d',(i*90)+'ms');});});
-    document.querySelectorAll('.toolkit .row').forEach(function(r){[].slice.call(r.querySelectorAll('.pill')).forEach(function(p,i){p.style.setProperty('--d',(i*60)+'ms');});});
-    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-    els.forEach(function(e){io.observe(e);});
-    addEventListener('scroll',function(){var d=document.documentElement;if(d.scrollTop+d.clientHeight>=d.scrollHeight-4){els.forEach(function(e){e.classList.add('in');});}},{passive:true});
-  })();
-  // subtle parallax on hero floaters
-  (function(){var f=document.querySelector('.floaters');if(!f||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    addEventListener('mousemove',function(e){var x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);f.style.transform='translate('+(x*-18)+'px,'+(y*-12)+'px)';},{passive:true});})();
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  document.querySelectorAll('.steps,.gallery,.rows').forEach(function(g){[].slice.call(g.children).forEach(function(c,i){c.style.setProperty('--d',(i*110)+'ms');});});
+  function show(e){e.classList.add('in');}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.concat([].slice.call(document.querySelectorAll('.steps,.rows'))).forEach(function(e){io.observe(e);});
+    addEventListener('scroll',function(){var d=document.documentElement;if(d.scrollTop+d.clientHeight>=d.scrollHeight-4)els.forEach(show);},{passive:true});
+  } else { els.forEach(show); }
 
+  // dots index
+  document.querySelectorAll('.dots i').forEach(function(d,i){d.style.setProperty('--i',(i%7)+Math.floor(i/7));});
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // scroll: progress, header, parallax
+  var hdr=document.getElementById('hdr'),shots=[].slice.call(document.querySelectorAll('.plate.shot img')),tick=false;
+  function onScroll(){
+    tick=false;var d=document.documentElement,y=d.scrollTop||document.body.scrollTop,h=d.scrollHeight-d.clientHeight;
+    hdr.style.setProperty('--p',h>0?(y/h).toFixed(4):0);hdr.classList.toggle('scrolled',y>8);
+    if(reduce)return;var vh=innerHeight;
+    shots.forEach(function(im){var r=im.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;var c=(r.top+r.height/2-vh/2)/vh;im.style.setProperty('--py',(c*-28).toFixed(1)+'px');});
+  }
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll);}},{passive:true});onScroll();
+  // plate click opens case study + cursor label
+  var cur=document.getElementById('cur'),cx=0,cy=0,tx=0,ty=0,run=false;
+  function loop(){cx+=(tx-cx)*.22;cy+=(ty-cy)*.22;cur.style.left=cx+'px';cur.style.top=cy+'px';if(Math.abs(tx-cx)+Math.abs(ty-cy)>.5)requestAnimationFrame(loop);else run=false;}
+  var fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+  document.querySelectorAll('.project .plate.shot').forEach(function(pl){
+    var b=pl.querySelector('[data-open]');if(!b)return;
+    pl.addEventListener('click',function(e){if(e.target.closest('.pillbtn'))return;b.click();});
+    if(!fine||reduce)return;
+    pl.addEventListener('mouseenter',function(e){cx=tx=e.clientX;cy=ty=e.clientY;cur.classList.add('on');});
+    pl.addEventListener('mouseleave',function(){cur.classList.remove('on');});
+    pl.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;var over=!!e.target.closest('.pillbtn');cur.classList.toggle('on',!over);if(!run){run=true;requestAnimationFrame(loop);}});
+  });
+  // case study pills
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){var d=document.getElementById(b.getAttribute('data-open'));if(!d)return;d.open=true;d.querySelector('summary').scrollIntoView({behavior:'smooth',block:'start'});});});
+  // menu
+  var m=document.getElementById('menu'),bt=document.getElementById('burger');
+  function close(){m.hidden=true;bt.setAttribute('aria-expanded','false');}
+  bt.addEventListener('click',function(){m.hidden=false;bt.setAttribute('aria-expanded','true');});
+  document.getElementById('menuClose').addEventListener('click',close);
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  // copy email
   var copy=document.getElementById('copy');
   copy.addEventListener('click',function(){
     var t=document.getElementById('mail').textContent;
     function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
-    function done(){copy.textContent='Copied ✓';setTimeout(function(){copy.textContent='Copy email →'},1600);}
+    function done(){copy.textContent='Copied';setTimeout(function(){copy.textContent='Copy email';},1600);}
     if(navigator.clipboard){navigator.clipboard.writeText(t).then(done).catch(sel);}else{sel();}
-  });
-
-  (function(){
-    var hw=document.getElementById('hw'); if(!hw) return;
-    var steps=[].slice.call(hw.querySelectorAll('.hw-step'));
-    var arrows=[].slice.call(hw.querySelectorAll('.hw-arrow'));
-    var userScroll=false; hw.addEventListener('touchstart',function(){userScroll=true;stop();},{passive:true});
-    var i=0, timer=null, inView=false;
-    var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function set(n){
-      i=n; hw.style.setProperty('--i',n);
-      steps.forEach(function(el,k){el.classList.toggle('on',k===n);el.classList.toggle('done',k<n);});
-      arrows.forEach(function(el,k){el.classList.toggle('lit',k<n);});
-      if(hw.scrollWidth>hw.clientWidth&&userScroll===false){var t=steps[n];hw.scrollTo({left:t.offsetLeft-20,behavior:'smooth'});}
-    }
-    function play(){ if(still||timer) return; timer=setInterval(function(){set((i+1)%steps.length);},2400); }
-    function stop(){ clearInterval(timer); timer=null; }
-    steps.forEach(function(el,k){
-      el.addEventListener('mouseenter',function(){stop();set(k);});
-      el.addEventListener('focus',function(){stop();set(k);});
-      el.addEventListener('click',function(){stop();set(k);});
-    });
-    hw.addEventListener('mouseleave',function(){ if(inView) play(); });
-    set(still?steps.length-1:0);
-    if('IntersectionObserver' in window){
-      new IntersectionObserver(function(es){es.forEach(function(e){inView=e.isIntersecting; if(inView){ if(!timer) set(0); play(); } else stop();});},{threshold:.35}).observe(hw);
-    } else { play(); }
-  })();
-  document.querySelectorAll('.tiles .tile').forEach(function(a){
-    a.addEventListener('click',function(){var d=document.querySelector(a.getAttribute('href'));if(d)d.open=true;});
   });
 })();
 </script>
