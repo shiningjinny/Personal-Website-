@@ -532,6 +532,12 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 .cd-caret{width:1px;height:14px;background:#2B3A55;animation:cdc 1s steps(2) infinite}@keyframes cdc{50%{opacity:0}}
 @media (max-width:640px){.chatdemo{width:86%;height:96%}.cd-m{font-size:11.5px}}
 .prole{margin:6px 0 0;font-size:13px;color:var(--ink2);letter-spacing:.01em}
+.progx .gitem{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-content:center}
+.progx .gitem>.plate{grid-column:1;grid-row:1/span 6;aspect-ratio:4/3;align-self:center}
+.progx .gitem>:not(.plate){grid-column:2}
+.pon{margin:28px 0 0;font-size:14.5px;color:var(--ink2);border-top:1px solid var(--rule);padding-top:16px}
+.pon a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){.progx .gitem{grid-template-columns:minmax(0,1fr)}.progx .gitem>.plate,.progx .gitem>:not(.plate){grid-column:1;grid-row:auto}}
 :root{--serif:"EB Garamond","Noto Serif KR","Iowan Old Style",Georgia,serif;--sans:"Hanken Grotesk","Noto Sans KR","Helvetica Neue",Arial,sans-serif}
 body{word-break:keep-all;overflow-wrap:anywhere}
 </style>
@@ -615,7 +621,7 @@ body{word-break:keep-all;overflow-wrap:anywhere}
           <div class="block"><h4>문제</h4><p class="big">아이들은 AI에 질문할 줄 알기도 전에 AI를 만납니다. 이 연령대의 인기 앱은 글자와 숫자를 가르치지만, 기계가 왜 그렇게 답했는지 묻는 법을 가르치는 앱은 없습니다.</p></div>
           <div class="block"><h4>연구 기반</h4><p>모든 구역과 모험은 검증된 AI 리터러시 커리큘럼에 매핑되어 있습니다. 게임은 내용이 아니라 전달 방식입니다.</p>
             <ul class="refs">
-              <li><a href="https://doi.org/10.1787/65cd27d4-en" target="_blank" rel="noopener">OECD/European Commission AI Literacy Framework (2026) ↗</a><span>AI와 상호작용하고, AI로 만들고, AI를 관리하는 역량</span></li>
+              <li><a href="https://doi.org/10.1787/65cd27d4-en" target="_blank" rel="noopener">Organisation for Economic Co-operation and Development (OECD)/European Commission AI Literacy Framework (2026) ↗</a><span>AI와 상호작용하고, AI로 만들고, AI를 관리하는 역량</span></li>
               <li><a href="https://ai4k12.org/gradeband-progression-charts/" target="_blank" rel="noopener">AI4K12 grade-band progressions ↗</a><span>유치원~초등 2학년(K–2) 수준의 Big Ideas 1–5</span></li>
               <li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5040" target="_blank" rel="noopener">PopBots, Association for the Advancement of Artificial Intelligence (AAAI) 2019 ↗</a><span>직접 해보는 놀이로 어린아이에게 AI 가르치기</span></li>
               <li><a href="https://www-prod.media.mit.edu/publications/hey-google-is-it-ok-if-i-eat-you-initial-explorations-in-child-agent-interaction/" target="_blank" rel="noopener">Druga et al., Interaction Design and Children (IDC) 2017 ↗</a><span>아이들이 AI 에이전트를 인식하고 대화하는 방식</span></li>
@@ -814,7 +820,7 @@ body{word-break:keep-all;overflow-wrap:anywhere}
 
   <section class="g" id="programmes"><div class="wrap">
     <div class="sec-title rv"><h2>Programmes</h2><p>화면과 테이블, 온라인과 오프라인 양쪽에서 기획하는 유아동 AI 리터러시 교육</p></div>
-    <div class="gallery two">
+    <div class="progx">
       <div class="gitem rv">
         <div class="plate photo"><img src="img/mombot.webp" alt="그림 카드와 칸막이, 탁상 벨 옆에서 블록을 쌓는 아이" loading="lazy" style="object-position:center 45%"></div>
         <div class="cap">Save MomBot! <span>· 오프라인 · 7–10세</span></div>
@@ -823,13 +829,9 @@ body{word-break:keep-all;overflow-wrap:anywhere}
         <ul class="learn"><li>AI는 말한 대로만 움직여요</li><li>AI도 틀릴 수 있고, 아이가 그걸 잡아낼 수 있어요</li><li>그래서 AI에는 분명한 지시와 안전 규칙이 필요해요</li></ul>
         <p class="pmeta">스테이션형, 한 팀당 10–12분 · 기본 난이도 9–10세, 7–8세는 쉬운 모드 · 콘셉트·교육 설계</p>
       </div>
-      <div class="gitem rv">
-        <div class="plate shot" style="background:#E9E4F8"><img src="img/aiki-2.webp" alt="Little AIKi sea map with Bubble Lab, Ask and Check, Create Reef and Heart Lagoon" loading="lazy" style="object-fit:contain;height:88%;width:auto"></div>
-        <div class="cap">Little AIKi <span>· 온라인 · 5–10세</span></div>
-        <p>아이가 AI와 함께 만들고, AI가 틀렸을 때 잡아내는 법을 배우는 생성형 AI 놀이터입니다. 한국어·영어·독일어로 제공됩니다. <a href="#work">케이스 스터디 보기</a></p>
-        <ul class="learn"><li>아이가 AI와 안전하게 창작해요</li><li>AI가 만든 결과를 확인하고 이유를 물어요</li><li>부모님께는 4–7세용 플레이북 <i>Smart Kids, Safe AI</i>를 드려요</li></ul>
-      </div>
+</div>
     </div>
+    <p class="pon rv"><b>온라인:</b> 5–10세를 위한 웹 놀이터 Little AIKi. <a href="#work">대표 작업 보기</a></p>
   </div></section>
 
   <section class="g" id="writing"><div class="wrap">

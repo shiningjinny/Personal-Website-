@@ -534,6 +534,12 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 .cd-caret{width:1px;height:14px;background:#2B3A55;animation:cdc 1s steps(2) infinite}@keyframes cdc{50%{opacity:0}}
 @media (max-width:640px){.chatdemo{width:86%;height:96%}.cd-m{font-size:11.5px}}
 .prole{margin:6px 0 0;font-size:13px;color:var(--ink2);letter-spacing:.01em}
+.progx .gitem{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-content:center}
+.progx .gitem>.plate{grid-column:1;grid-row:1/span 6;aspect-ratio:4/3;align-self:center}
+.progx .gitem>:not(.plate){grid-column:2}
+.pon{margin:28px 0 0;font-size:14.5px;color:var(--ink2);border-top:1px solid var(--rule);padding-top:16px}
+.pon a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){.progx .gitem{grid-template-columns:minmax(0,1fr)}.progx .gitem>.plate,.progx .gitem>:not(.plate){grid-column:1;grid-row:auto}}
 </style>
 
 </head>
@@ -557,7 +563,7 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
         <div class="me-text">
           <p class="bio">For five years I planned supply chains in the global automotive industry, turning regulations and messy operations into systems that run.</p>
           <p class="bio bio2">Then I became a mother, and the question changed. Now I build <mark>research-grounded artificial intelligence (AI) products that help children grow up safe, curious and in charge.</mark></p>
-          <ul class="proof"><li><b>Selected to pitch to X, The Moonshot Factory (Google X)</b><span>Sep 2026</span></li><li><b>Assistant handed over to a non-governmental organisation (NGO) partner</b><span>2026</span></li><li><b>Learning analytics on 32,593 learners</b><span>2026</span></li></ul>
+          <ul class="proof"><li><b>Selected to pitch to X, The Moonshot Factory (Google X)</b><span>Sep 2026</span></li><li><b>Assistant handed over to a non-profit partner</b><span>2026</span></li><li><b>Learning analytics on 32,593 learners</b><span>2026</span></li></ul>
           <div class="focus"><span class="em">AI literacy</span><span class="em">AI ethics</span><span>AI product</span><span>AI for good</span><span>Safe &amp; responsible AI</span><span>AI for kids</span></div>
           <div class="cv">
           <div><h4>Now</h4><ul><li>MSc AI in Society, Technical University of Munich (TUM)<span>2024 – 2027 (expected)</span></li><li>Co-Founder &amp; CEO, DoranDoran<span>2026 – present</span></li><li>Founding Member, TUM Social AI<span>2025 – present</span></li></ul></div>
@@ -606,7 +612,7 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
     <article class="project">
       <div class="phead rv"><div class="ttl"><p class="eyebrow">AI for kids · 2026</p><h3>Little AIKi</h3><p class="sub">Gen AI native playground fostering kids' agency and creativity · DoranDoran</p><p class="prole">My role: CEO &amp; co-founder · led curriculum and product design</p></div></div>
       <div class="plate shot rv" style="background:#E9E4F8"><div class="phones"><img class="ph" src="img/aiki-1.webp" alt="Little AIKi landing screen: Dive in, think and play with AI" loading="lazy"><img class="ph" src="img/aiki-2.webp" alt="Little AIKi sea map with Bubble Lab, Ask and Check, Create Reef and Heart Lagoon" loading="lazy"><img class="ph" src="img/aiki-3.webp" alt="Little AIKi home screen with sea zones and today's adventures" loading="lazy"></div><button class="pillbtn" type="button" data-open="c1">Read case study <i>›</i></button></div>
-      <p class="basis rv">Not just a game: a curriculum built on the Organisation for Economic Co-operation and Development (OECD) and European Union (EU) AI Literacy Framework and AI4K12, turned into play that is safe, easy and fun.</p>
+      <p class="basis rv">Not just a game: a curriculum built on the international AI Literacy Framework and AI4K12, turned into play that is safe, easy and fun.</p>
       <p class="outcome rv"><span>Result</span>Web prototype piloted with <b>about 30 families</b>; selected to pitch to <b>X, The Moonshot Factory (Google X)</b> in Sep 2026.</p>
       
       <details class="case narrow" id="c1"><summary><span>Read the case study</span></summary>
@@ -615,14 +621,14 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
           <div class="block"><h4>Problem</h4><p class="big">Children meet AI before they can question it. Popular apps for this age teach letters and numbers, but none teach a child to ask why a machine answered the way it did.</p></div>
           <div class="block"><h4>Built on research</h4><p>Every zone and adventure maps to an established AI literacy curriculum, so the game is the delivery, not the content:</p>
             <ul class="refs">
-              <li><a href="https://doi.org/10.1787/65cd27d4-en" target="_blank" rel="noopener">OECD/European Commission AI Literacy Framework (2026) ↗</a><span>Competences for engaging with, creating with and managing AI</span></li>
+              <li><a href="https://doi.org/10.1787/65cd27d4-en" target="_blank" rel="noopener">Organisation for Economic Co-operation and Development (OECD)/European Commission AI Literacy Framework (2026) ↗</a><span>Competences for engaging with, creating with and managing AI</span></li>
               <li><a href="https://ai4k12.org/gradeband-progression-charts/" target="_blank" rel="noopener">AI4K12 grade-band progressions ↗</a><span>Big Ideas 1–5 at the kindergarten to grade 2 (K–2) level</span></li>
               <li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5040" target="_blank" rel="noopener">PopBots, Association for the Advancement of Artificial Intelligence (AAAI) 2019 ↗</a><span>Teaching young children AI through hands-on play</span></li>
               <li><a href="https://www-prod.media.mit.edu/publications/hey-google-is-it-ok-if-i-eat-you-initial-explorations-in-child-agent-interaction/" target="_blank" rel="noopener">Druga et al., Interaction Design and Children (IDC) 2017 ↗</a><span>How children perceive and talk to AI agents</span></li>
             </ul>
             <p class="attr">AI Literacy (AILit) content: OECD/European Commission (2026), <i>Empowering Learners for the Age of AI</i>, Creative Commons Attribution 4.0 (CC BY 4.0). This is an adaptation by DoranDoran; the adaptation is not endorsed by the OECD or the European Commission.</p>
           </div>
-          <div class="block"><h4>Process</h4><ul><li>Designed the Others–Self–AI (OSA) framework: notice bias in Others, then in Self, then in AI.</li><li>Mapped five ethics pillars across three age bands, starting with a first stage built for 5–6-year-olds: one gesture per action, short spoken lines, no reading required.</li><li>No penalties and no labels: children reflect through Socratic dialogue with a companion character.</li><li>Turned EU AI Act and Children's Online Privacy Protection Act (COPPA) requirements into design rules, from data collection to how the AI companion is allowed to speak.</li></ul></div>
+          <div class="block"><h4>Process</h4><ul><li>Designed the Others–Self–AI (OSA) framework: notice bias in Others, then in Self, then in AI.</li><li>Mapped five ethics pillars across three age bands, starting with a first stage built for 5–6-year-olds: one gesture per action, short spoken lines, no reading required.</li><li>No penalties and no labels: children reflect through Socratic dialogue with a companion character.</li><li>Turned European Union (EU) AI Act and Children's Online Privacy Protection Act (COPPA) requirements into design rules, from data collection to how the AI companion is allowed to speak.</li></ul></div>
           <div class="block"><h4>Key decisions</h4>
             <div class="decision"><b>No scores, penalties or labels.</b><p>A five-year-old should never be told she is "biased". The companion reflects her choices back as questions instead.</p></div>
             <div class="decision"><b>Parent reports describe, they don't diagnose.</b><p>"Often chose the bigger friend" instead of a bias label, so parents don't read a report as a verdict on their child.</p></div>
@@ -681,7 +687,7 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 
     <!-- 03 -->
     <article class="project">
-      <div class="phead rv"><div class="ttl"><p class="eyebrow">AI for good · 2026</p><h3>InitiativGruppe Assistant</h3><p class="sub">Retrieval-augmented generation (RAG) chatbot for a Munich NGO supporting migrant women and children · TUM Social AI</p><p class="prole">My role: problem definition · product flow · process design · frontend</p></div></div>
+      <div class="phead rv"><div class="ttl"><p class="eyebrow">AI for good · 2026</p><h3>InitiativGruppe Assistant</h3><p class="sub">AI chatbot for a Munich non-profit supporting migrant women and children · TUM Social AI</p><p class="prole">My role: problem definition · product flow · process design · frontend</p></div></div>
       <div class="plate shot rv" style="background:var(--f-ig)"><div class="chatdemo" id="chatdemo" role="img" aria-label="Animated demo of the InitiativGruppe Assistant: it greets users in German, answers a question about German course registration with its source, then switches to English on request">
           <div class="cd-h"><b>InitiativGruppe Assistant</b><span>powered by TUM Social AI · demo</span></div>
           <div class="cd-body" id="cdBody"></div>
@@ -692,7 +698,7 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
         <div class="cs">
           <div class="meta"><span>Role: problem definition · product flow · process design · frontend</span><span>Team: TUM Social AI project team</span><span>10/2025 – 04/2026 · delivered to partner</span></div>
           <div class="block"><h4>Problem</h4><p class="big">InitiativGruppe supports migrant women and children in Munich with German classes, registration and counselling. Its small team answers the same questions again and again, while the people asking often can't find the answers on the website, in a language they don't read well yet. The assistant takes those routine questions off the team.</p></div>
-          <div class="block"><h4>Process</h4><ul><li>Defined requirements with the NGO: German- and mobile-first, multilingual answers, WordPress-ready, low running cost.</li><li>Designed the flow from question to answer with hybrid search (keywords + RAG) over the NGO's public content, refreshed by regular crawling.</li><li>Built the frontend.</li></ul></div>
+          <div class="block"><h4>Process</h4><ul><li>Defined requirements with the non-governmental organisation (NGO): German- and mobile-first, multilingual answers, WordPress-ready, low running cost.</li><li>Designed the flow from question to answer with hybrid search (keywords + retrieval-augmented generation, RAG) over the NGO's public content, refreshed by regular crawling.</li><li>Built the frontend.</li></ul></div>
           <div class="block"><h4>Key decisions</h4>
             <div class="decision"><b>Hybrid search, not a free-form chatbot.</b><p>Keywords plus RAG over the NGO's own pages, so answers about courses, registration and fees come from what the NGO actually published.</p></div>
             <div class="decision"><b>Fit the NGO, not the other way round.</b><p>A small nonprofit can't run new infrastructure, so the assistant reuses its WordPress site and free tiers.</p></div>
@@ -814,7 +820,7 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 
   <section class="g" id="programmes"><div class="wrap">
     <div class="sec-title rv"><h2>Programmes</h2><p>AI literacy education for young children, planned for both screen and table.</p></div>
-    <div class="gallery two">
+    <div class="progx">
       <div class="gitem rv">
         <div class="plate photo"><img src="img/mombot.webp" alt="A child building with toy blocks next to coloured picture cards, a cardboard divider and a desk bell" loading="lazy" style="object-position:center 45%"></div>
         <div class="cap">Save MomBot! <span>· Offline · Ages 7–10</span></div>
@@ -823,13 +829,9 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
         <ul class="learn"><li>AI does exactly what it is told</li><li>AI can get it wrong, and children can catch it</li><li>So AI needs clear instructions and safety rules</li></ul>
         <p class="pmeta">Station format, 10–12 minutes per pair · standard level for ages 9–10, easy mode for 7–8 · concept and educational design</p>
       </div>
-      <div class="gitem rv">
-        <div class="plate shot" style="background:#E9E4F8"><img src="img/aiki-2.webp" alt="Little AIKi sea map with Bubble Lab, Ask and Check, Create Reef and Heart Lagoon" loading="lazy" style="object-fit:contain;height:88%;width:auto"></div>
-        <div class="cap">Little AIKi <span>· Online · Ages 5–10</span></div>
-        <p>A Gen AI native playground where children create with AI and learn to catch it when it gets things wrong. In Korean, English and German. <a href="#work">See the case study</a></p>
-        <ul class="learn"><li>Children create with AI, safely</li><li>They check what the AI made and ask why</li><li>Parents get the playbook <i>Smart Kids, Safe AI</i> for ages 4–7</li></ul>
-      </div>
+</div>
     </div>
+    <p class="pon rv"><b>Online:</b> Little AIKi, a web playground for ages 5–10. <a href="#work">See Selected work</a></p>
   </div></section>
 
   <section class="g" id="writing"><div class="wrap">
