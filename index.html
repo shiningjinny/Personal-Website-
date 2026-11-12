@@ -513,18 +513,22 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 .lang a{padding:4px 9px;border-radius:999px;text-decoration:none;color:var(--muted)}
 .lang a.on{background:var(--ink);color:var(--paper)}
 .lang a:not(.on):hover{color:var(--ink)}
+.gitem .pnote{margin:0;font-size:14.5px;color:var(--ink)}
+.gitem ul.learn{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink2);display:grid;gap:4px}
+.gitem .pmeta{margin:0;font-size:13px;color:var(--muted)}
+.gitem .pmeta a,.gitem p a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </style>
 
 </head>
 <body>
 <header class="g" id="hdr"><div class="wrap">
   <div class="brand"><div class="lang" aria-label="Language"><a class="on" href="index.html" aria-current="true">EN</a><a href="ko.html" hreflang="ko" lang="ko">KR</a></div><a class="mark" href="#top">Jinkyeong Lee</a></div>
-  <nav class="navlinks" aria-label="Main"><a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks" aria-label="Main"><a href="#work">Work</a><a href="#programmes">Programmes</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </div><span class="prog" aria-hidden="true"></span></header>
 <div class="menu" id="menu" hidden>
   <button class="close" id="menuClose" type="button">Close</button>
-  <a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a>
+  <a href="#work">Work</a><a href="#programmes">Programmes</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a>
 </div>
 
 <main id="top">
@@ -786,6 +790,28 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
   
 
   
+
+  <section class="g" id="programmes"><div class="wrap">
+    <div class="sec-title rv"><h2>Programmes</h2><p>AI literacy education for young children, planned for both screen and table.</p></div>
+    <div class="gallery two">
+      <div class="gitem rv">
+        <div class="plate photo"><img src="img/mombot.webp" alt="A child building with toy blocks next to coloured picture cards, a cardboard divider and a desk bell" loading="lazy" style="object-position:center 45%"></div>
+        <div class="cap">Save MomBot! <span>· Offline · Ages 7–10</span></div>
+        <p class="pnote"><b>Pre-activity at TUM KinderUni, 27 Nov 2026</b></p>
+        <p>A screen-free block game for one child and one parent. The child looks at a picture card and gives instructions; behind a divider, mum plays MomBot and builds only what she hears. Module by module, they compare the picture, the child's build and MomBot's. If MomBot gets it right, mum is saved.</p>
+        <ul class="learn"><li>AI does exactly what it is told</li><li>AI can get it wrong, and children can catch it</li><li>So AI needs clear instructions and safety rules</li></ul>
+        <p class="pmeta">Station format, 10–12 minutes per pair · standard level for ages 9–10, easy mode for 7–8 · concept and educational design</p>
+      </div>
+      <div class="gitem rv">
+        <div class="plate shot" style="background:#E9E4F8"><img src="img/aiki-2.webp" alt="Little AIKi sea map with Bubble Lab, Ask and Check, Create Reef and Heart Lagoon" loading="lazy" style="object-fit:contain;height:88%;width:auto"></div>
+        <div class="cap">Little AIKi <span>· Online · Ages 5–10</span></div>
+        <p class="pnote"><b>Web prototype, piloted with about 30 families</b></p>
+        <p>A Gen AI native playground where children create with AI and learn to catch it when it gets things wrong. In Korean, English and German. <a href="#work">See the case study</a></p>
+        <ul class="learn"><li>Children create with AI, safely</li><li>They check what the AI made and ask why</li><li>Parents get the playbook <i>Smart Kids, Safe AI</i> for ages 4–7</li></ul>
+        <p class="pmeta">Pilot figure from the earlier version (Wisdom Island)</p>
+      </div>
+    </div>
+  </div></section>
 
   <section class="g" id="writing"><div class="wrap">
     <div class="sec-title rv"><h2>Talks &amp; writing</h2></div>

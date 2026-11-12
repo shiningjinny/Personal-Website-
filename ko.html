@@ -511,6 +511,10 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 .lang a{padding:4px 9px;border-radius:999px;text-decoration:none;color:var(--muted)}
 .lang a.on{background:var(--ink);color:var(--paper)}
 .lang a:not(.on):hover{color:var(--ink)}
+.gitem .pnote{margin:0;font-size:14.5px;color:var(--ink)}
+.gitem ul.learn{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink2);display:grid;gap:4px}
+.gitem .pmeta{margin:0;font-size:13px;color:var(--muted)}
+.gitem .pmeta a,.gitem p a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 :root{--serif:"EB Garamond","Noto Serif KR","Iowan Old Style",Georgia,serif;--sans:"Hanken Grotesk","Noto Sans KR","Helvetica Neue",Arial,sans-serif}
 body{word-break:keep-all;overflow-wrap:anywhere}
 </style>
@@ -519,12 +523,12 @@ body{word-break:keep-all;overflow-wrap:anywhere}
 <body>
 <header class="g" id="hdr"><div class="wrap">
   <div class="brand"><div class="lang" aria-label="언어"><a href="index.html" hreflang="en" lang="en">EN</a><a class="on" href="ko.html" aria-current="true">KR</a></div><a class="mark" href="#top">Jinkyeong Lee</a></div>
-  <nav class="navlinks" aria-label="Main"><a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks" aria-label="Main"><a href="#work">Work</a><a href="#programmes">Programmes</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </div><span class="prog" aria-hidden="true"></span></header>
 <div class="menu" id="menu" hidden>
   <button class="close" id="menuClose" type="button">닫기</button>
-  <a href="#work">Work</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a>
+  <a href="#work">Work</a><a href="#programmes">Programmes</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#contact">Contact</a>
 </div>
 
 <main id="top">
@@ -786,6 +790,28 @@ body{word-break:keep-all;overflow-wrap:anywhere}
   
 
   
+
+  <section class="g" id="programmes"><div class="wrap">
+    <div class="sec-title rv"><h2>Programmes</h2><p>화면과 테이블, 온라인과 오프라인 양쪽에서 기획하는 유아동 AI 리터러시 교육</p></div>
+    <div class="gallery two">
+      <div class="gitem rv">
+        <div class="plate photo"><img src="img/mombot.webp" alt="그림 카드와 칸막이, 탁상 벨 옆에서 블록을 쌓는 아이" loading="lazy" style="object-position:center 45%"></div>
+        <div class="cap">Save MomBot! <span>· 오프라인 · 7–10세</span></div>
+        <p class="pnote"><b>TUM KinderUni 사전 활동으로 선정, 2026년 11월 27일</b></p>
+        <p>아이 한 명과 부모 한 명이 함께하는 화면 없는 블록 게임입니다. 아이가 그림 카드를 보고 말로 지시하면, 칸막이 건너편의 엄마는 맘봇이 되어 들은 그대로만 블록을 쌓습니다. 한 단계씩 그림, 아이의 작품, 맘봇의 작품을 비교하고, 맘봇이 성공하면 엄마를 구해냅니다.</p>
+        <ul class="learn"><li>AI는 말한 대로만 움직여요</li><li>AI도 틀릴 수 있고, 아이가 그걸 잡아낼 수 있어요</li><li>그래서 AI에는 분명한 지시와 안전 규칙이 필요해요</li></ul>
+        <p class="pmeta">스테이션형, 한 팀당 10–12분 · 기본 난이도 9–10세, 7–8세는 쉬운 모드 · 콘셉트·교육 설계</p>
+      </div>
+      <div class="gitem rv">
+        <div class="plate shot" style="background:#E9E4F8"><img src="img/aiki-2.webp" alt="Little AIKi sea map with Bubble Lab, Ask and Check, Create Reef and Heart Lagoon" loading="lazy" style="object-fit:contain;height:88%;width:auto"></div>
+        <div class="cap">Little AIKi <span>· 온라인 · 5–10세</span></div>
+        <p class="pnote"><b>웹 프로토타입, 약 30가정 파일럿</b></p>
+        <p>아이가 AI와 함께 만들고, AI가 틀렸을 때 잡아내는 법을 배우는 생성형 AI 놀이터입니다. 한국어·영어·독일어로 제공됩니다. <a href="#work">케이스 스터디 보기</a></p>
+        <ul class="learn"><li>아이가 AI와 안전하게 창작해요</li><li>AI가 만든 결과를 확인하고 이유를 물어요</li><li>부모님께는 4–7세용 플레이북 <i>Smart Kids, Safe AI</i>를 드려요</li></ul>
+        <p class="pmeta">파일럿 수치는 이전 버전(Wisdom Island) 기준</p>
+      </div>
+    </div>
+  </div></section>
 
   <section class="g" id="writing"><div class="wrap">
     <div class="sec-title rv"><h2>Talks &amp; writing</h2></div>
