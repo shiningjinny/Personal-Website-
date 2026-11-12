@@ -517,6 +517,22 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
 .gitem ul.learn{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink2);display:grid;gap:4px}
 .gitem .pmeta{margin:0;font-size:13px;color:var(--muted)}
 .gitem .pmeta a,.gitem p a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.chatdemo{width:min(360px,78%);height:92%;background:#FDF1E3;border-radius:14px;box-shadow:0 18px 44px rgba(40,20,10,.18);display:flex;flex-direction:column;overflow:hidden;font-family:var(--sans);text-align:left}
+.cd-h{background:#8B1E2B;color:#fff;padding:11px 16px;display:grid;gap:1px}
+.cd-h b{font-size:14.5px;font-weight:600}.cd-h span{font-size:10.5px;opacity:.82}
+.cd-body{flex:1;overflow:hidden;padding:12px;display:flex;flex-direction:column;gap:8px}
+.cd-m{max-width:84%;padding:8px 11px;border-radius:12px;font-size:12.5px;line-height:1.45;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;flex:none}
+.cd-m.show{opacity:1;transform:none}
+.cd-m ul{margin:4px 0;padding-left:16px}
+.cd-bot{background:#fff;color:#2B3A55;align-self:flex-start;border-top-left-radius:4px}
+.cd-user{background:#8B1E2B;color:#fff;align-self:flex-end;border-top-right-radius:4px}
+.cd-src{display:block;margin-top:6px;font-size:10.5px;color:#8B1E2B;font-weight:600}
+.cd-dots{display:inline-flex;gap:4px;padding:2px 0}.cd-dots i{width:6px;height:6px;border-radius:50%;background:#B9A99A;animation:cdb 1s infinite}.cd-dots i:nth-child(2){animation-delay:.15s}.cd-dots i:nth-child(3){animation-delay:.3s}
+@keyframes cdb{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.cd-in{display:flex;align-items:center;gap:2px;border-top:1px solid #EAD9C6;background:#fff;padding:9px 12px;font-size:12px;color:#2B3A55;min-height:36px}
+.cd-in em{margin-left:auto;font-style:normal;font-size:11px;color:#fff;background:#8B1E2B;border-radius:999px;padding:3px 10px}
+.cd-caret{width:1px;height:14px;background:#2B3A55;animation:cdc 1s steps(2) infinite}@keyframes cdc{50%{opacity:0}}
+@media (max-width:640px){.chatdemo{width:86%;height:96%}.cd-m{font-size:11.5px}}
 </style>
 
 </head>
@@ -665,7 +681,11 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
     <!-- 03 -->
     <article class="project">
       <div class="phead rv"><div class="ttl"><p class="eyebrow">AI for good · 2026</p><h3>InitiativGruppe Assistant</h3><p class="sub">Retrieval-augmented generation (RAG) chatbot for a Munich NGO supporting migrant women and children · TUM Social AI</p></div></div>
-      <div class="plate shot rv" style="background:var(--f-ig)"><img src="img/chatbot-ui.webp" alt="InitiativGruppe Assistant chat window greeting users in German and listing course, registration and counselling topics" loading="lazy"><button class="pillbtn" type="button" data-open="c3">Read case study <i>›</i></button></div>
+      <div class="plate shot rv" style="background:var(--f-ig)"><div class="chatdemo" id="chatdemo" role="img" aria-label="Animated demo of the InitiativGruppe Assistant: it greets users in German, answers a question about German course registration with its source, then switches to English on request">
+          <div class="cd-h"><b>InitiativGruppe Assistant</b><span>powered by TUM Social AI · demo</span></div>
+          <div class="cd-body" id="cdBody"></div>
+          <div class="cd-in"><span id="cdInput"></span><i class="cd-caret"></i><em>Senden</em></div>
+        </div><button class="pillbtn" type="button" data-open="c3">Read case study <i>›</i></button></div>
       <p class="outcome rv"><span>Result</span>Demoed at TUM Social AI Demo Day (Apr 2026) and <b>handed over to InitiativGruppe</b>.</p>
       <details class="case narrow" id="c3"><summary><span>Read the case study</span></summary>
         <div class="cs">
@@ -991,6 +1011,39 @@ mark{background:linear-gradient(transparent 60%,#E3DDF6 60%);color:inherit;paddi
     function done(){copy.textContent='Copied';setTimeout(function(){copy.textContent='Copy email';},1600);}
     if(navigator.clipboard){navigator.clipboard.writeText(t).then(done).catch(sel);}else{sel();}
   });
+})();
+</script>
+<script>
+(function(){
+  var body=document.getElementById('cdBody'),inp=document.getElementById('cdInput');if(!body)return;
+  var S=[
+   {w:'bot',h:'👋 Willkommen bei der InitiativGruppe! Ich unterstütze Sie gerne mit Informationen zu unseren Angeboten. Zum Beispiel zu:<ul><li>Deutsch- und Integrationskursen</li><li>Anmeldung, Kosten und Kostenbefreiung</li><li>Beratung und weiteren Unterstützungsangeboten</li></ul>Was möchten Sie wissen?',instant:1},
+   {w:'user',t:'Wie melde ich mich für einen Deutschkurs an?'},
+   {w:'bot',t:'Hier finden Sie die Informationen zur Anmeldung für Deutsch- und Integrationskurse, mit Kosten und Möglichkeiten zur Kostenbefreiung.',src:'Quelle: Website der InitiativGruppe'},
+   {w:'user',t:'Can you answer in English?'},
+   {w:'bot',t:'Of course. I can answer in several languages, and every answer comes from the InitiativGruppe website.',src:'Source: InitiativGruppe website'}
+  ];
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function el(w){var d=document.createElement('div');d.className='cd-m cd-'+w;body.appendChild(d);return d}
+  function scroll(){body.scrollTop=body.scrollHeight}
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+  function src(d,x){if(x){var s=document.createElement('span');s.className='cd-src';s.textContent=x;d.appendChild(s)}}
+  if(reduce){S.forEach(function(m){var d=el(m.w);if(m.h)d.innerHTML=m.h;else d.textContent=m.t;src(d,m.src);d.classList.add('show')});scroll();return}
+  async function run(){
+    while(true){
+      body.innerHTML='';inp.textContent='';
+      for(var i=0;i<S.length;i++){var m=S[i];
+        if(m.w==='user'){await wait(900);for(var c=1;c<=m.t.length;c++){inp.textContent=m.t.slice(0,c);await wait(38)}await wait(350);inp.textContent='';var u=el('user');u.textContent=m.t;requestAnimationFrame(function(){u.classList.add('show')});scroll();}
+        else if(m.instant){var b0=el('bot');b0.innerHTML=m.h;await wait(200);b0.classList.add('show');}
+        else{await wait(500);var t=el('bot');t.innerHTML='<span class="cd-dots"><i></i><i></i><i></i></span>';t.classList.add('show');scroll();await wait(1100);t.textContent='';
+          var words=m.t.split(' ');for(var k=0;k<words.length;k++){t.textContent+=(k?' ':'')+words[k];scroll();await wait(70)}src(t,m.src);scroll();}
+      }
+      await wait(4500);body.style.transition='opacity .4s';body.style.opacity=0;await wait(450);body.style.opacity=1;
+    }
+  }
+  var started=false;
+  var io=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!started){started=true;run()}},{threshold:.3});
+  io.observe(document.getElementById('chatdemo'));
 })();
 </script>
 </body>
